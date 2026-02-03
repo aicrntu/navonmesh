@@ -19,6 +19,11 @@ import BinarryBattleForm from "../features/public/components/forms/Binarrybattle
 import RoboWarriorForm from "../features/public/components/forms/RobowarriorForm";
 import InnomakerForm from "../features/public/components/forms/InnomakerForm";
 import SoloSpotlightForm from "../features/public/components/forms/SoloSpotlightForm";
+import CrewClashForm from "../features/public/components/forms/CrewClashForm";
+import TaleTellersForm from "../features/public/components/forms/TaleTellersForm";
+import MicDropForm from "../features/public/components/forms/MicDropForm";
+import TheEnsembleForm from "../features/public/components/forms/TheEnsembleForm";
+import ChefArenaForm from "../features/public/components/forms/ChefArenaForm";
 
 // admin pages
 import Login from "../features/admin/pages/Login";
@@ -51,6 +56,11 @@ export default function AppRouter() {
         <Route path="/innomaker-form" element={<InnomakerForm />} />
         <Route path="/robowarrior-form" element={<RoboWarriorForm />} />
         <Route path="/solospotlight-form" element={<SoloSpotlightForm />} />
+        <Route path="/crewclash-form" element={<CrewClashForm />} />
+        <Route path="/taletellers-form" element={<TaleTellersForm />} />
+        <Route path="/micdrop-form" element={<MicDropForm />} />
+        <Route path="/theensemble-form" element={<TheEnsembleForm />} />
+        <Route path="/chefarena-form" element={<ChefArenaForm />} />
       </Route>
 
       {/* ADMIN */}

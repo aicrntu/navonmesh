@@ -7,6 +7,11 @@ import innomakerRoutes from "./routes/innomaker.route.js";
 import robowarriorRoutes from "./routes/robowarrior.route.js";
 import binarybattleRoutes from "./routes/binarybattle.route.js";
 import solospotlightRoutes from "./routes/solospotlight.route.js";
+import crewclashRoutes from "./routes/crewclash.route.js";
+import taletellersRoutes from "./routes/taletellers.route.js";
+import micdropRoutes from "./routes/micdrop.route.js";
+import theensembleRoutes from "./routes/theensemble.route.js";
+import chefarenaRoutes from "./routes/chefarena.route.js";
 
 const router = express.Router();
 
@@ -17,5 +22,10 @@ router.use(innomakerRoutes);
 router.use(robowarriorRoutes);
 router.use(binarybattleRoutes);
 router.use(solospotlightRoutes);
+router.use(crewclashRoutes);
+router.use(taletellersRoutes);
+router.use(micdropRoutes);
+router.use(theensembleRoutes);
+router.use(chefarenaRoutes);
 
 export default router;

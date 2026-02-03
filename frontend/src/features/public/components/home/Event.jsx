@@ -143,7 +143,7 @@ const Event = () => {
 
                             {/* Title */}
                             <h2 className="text-5xl md:text-6xl font-black mb-4">
-                                <span className="bg-gradient-to-r from-primary via-blue-400 to-secondary bg-clip-text text-transparent">
+                                <span className="text-primary">
                                     Event
                                 </span>{' '}
                                 <span className="text-white">Photos</span>

@@ -13,32 +13,39 @@ const INNOVATION_LEAGUE = [
         title: "ICAI",
         subtitle: "International Conference on Emerging Technologies in AI",
         icon: BrainCircuit,
-        isFeatured: true
+        isFeatured: true,
+        target: "_blank",
+        path: "https://conference.sgsuniversity.ac.in/"
     },
     {
         title: "PlanX",
         subtitle: "Business Plan Battle: Big Ideas Meet Bigger Opportunities",
-        icon: Rocket
+        icon: Rocket,
+        path: "/planx"
     },
     {
         title: "AdMadShow",
         subtitle: "The Ultimate Ad Creation Challenge",
-        icon: Megaphone
+        icon: Megaphone,
+        path: "/admadshow"
     },
     {
         title: "InnoMaker",
         subtitle: "Product Hackathon: Prototyping the Future",
-        icon: Hammer
+        icon: Hammer,
+        path: "/innomaker"
     },
     {
         title: "BinaryBattle",
         subtitle: "24-Hour Software Hackathon",
-        icon: Code
+        icon: Code,
+        path: "/binarybattle"
     },
     {
         title: "RoboWarrior",
         subtitle: "Engineer the Warrior in You",
-        icon: Bot
+        icon: Bot,
+        path: "/robowarrior"
     }
 ];
 
@@ -46,32 +53,38 @@ const CREATIVE_LEAGUE = [
     {
         title: "Solo Spotlight",
         subtitle: "Dance Championship",
-        icon: User
+        icon: User,
+        path: "/solospotlight-form"
     },
     {
         title: "Crew Clash",
         subtitle: "Group Dance Championship",
-        icon: Users
+        icon: Users,
+        path: "/crewclash-form"
     },
     {
         title: "Tale Tellers",
         subtitle: "Storytelling Championship",
-        icon: BookOpen
+        icon: BookOpen,
+        path: "/taletellers-form"
     },
     {
         title: "Chef's Arena",
         subtitle: "Cooking Championship",
-        icon: ChefHat
+        icon: ChefHat,
+        path: "/chefarena-form"
     },
     {
         title: "Mic Drop",
         subtitle: "Music Championship",
-        icon: Mic
+        icon: Mic,
+        path: "/micdrop-form"
     },
     {
         title: "The Ensemble",
         subtitle: "Band Championship",
-        icon: Music
+        icon: Music,
+        path: "/theensemble-form"
     }
 ];
 
@@ -80,7 +93,6 @@ import { Link } from 'react-router-dom';
 const CompetitionCard = ({ item, index, leagueType }) => {
     const isFeatured = item.isFeatured;
     const accentColor = leagueType === 'innovation' ? 'primary' : 'secondary';
-    const linkPath = item.title.toLowerCase().replace(/\s+/g, '');
 
     return (
         <motion.div
@@ -135,7 +147,7 @@ const CompetitionCard = ({ item, index, leagueType }) => {
 
             {/* CTA */}
             <Link
-                to={leagueType === 'innovation' ? `/${linkPath}` : '#'}
+                to={item.path}
                 className={cn(
                     "w-full py-2.5 px-4 rounded-lg font-semibold text-sm transition-all duration-300",
                     "flex items-center justify-center gap-2 border-2 text-center",
@@ -143,7 +155,7 @@ const CompetitionCard = ({ item, index, leagueType }) => {
                     accentColor === 'secondary' && "border-secondary text-secondary hover:bg-secondary hover:text-white hover:shadow-lg hover:shadow-secondary/50"
                 )}
             >
-                {leagueType === 'innovation' ? 'View Details' : 'Coming Soon'}
+                {leagueType === 'innovation' ? 'View Details' : 'Secure Your Spot'}
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
         </motion.div>

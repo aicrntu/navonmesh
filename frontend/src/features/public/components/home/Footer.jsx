@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, Globe, Facebook, Twitter, Linkedin, Instagram, ChevronUp, MapPin } from 'lucide-react';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import axios from 'axios';
+import { submitContact } from '../../../../api/contact.api.js';
 
 const cn = (...inputs) => twMerge(clsx(inputs));
 
@@ -44,7 +44,7 @@ const Footer = () => {
         setSubmitStatus(null);
 
         try {
-            await axios.post('/api/contact', formData);
+            await submitContact(formData);
             setSubmitStatus({
                 type: 'success',
                 message: 'Message sent successfully!'

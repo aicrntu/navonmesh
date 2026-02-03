@@ -7,6 +7,61 @@ const cn = (...inputs) => twMerge(clsx(inputs));
 
 const SPEAKERS = [
     {
+        name: "Mr. Aman Gupta",
+        role: "Co-Founder & CMO, BOAT",
+        image: "/speakers/new-2025/Aman Gupta.JPG"
+    },
+    {
+        name: "Mr. Rohit Kapoor",
+        role: "CEO Swiggy",
+        image: "/speakers/new-2025/rohit.JPG"
+    },
+    {
+        name: "Mayuresh Raut",
+        role: "Co-Founder & Managing Partner, Seafund",
+        image: "/speakers/new-2025/Mayuresh Raut.JPG"
+    },
+    {
+        name: "Bina Trivedi",
+        role: "Managing Partner, IL&FS Investment Managers Ltd",
+        image: "/speakers/new-2025/Bina Trivedi.JPG"
+    },
+    {
+        name: "Rajesh Sharma",
+        role: "Managing Partner, ADIGAN CAPITAL",
+        image: "/speakers/new-2025/Rajesh Sharma.JPG"
+    },
+    {
+        name: "Vikas Sarda",
+        role: "CFO, Unitus Capital",
+        image: "/speakers/new-2025/Vikas Sarda.JPG"
+    },
+    {
+        name: "Mr. Ajay J Singala",
+        role: "Enterprise Architect, SME, Mentor",
+        image: "/speakers/new-2025/Mr. Ajay J Singala.JPG"
+    },
+    {
+        name: "Anurag Asati",
+        role: "Co-Founder, The Kabadiwala",
+        image: "/speakers/new-2025/Anurag Asati.JPG"
+    },
+    {
+        name: "Aysha Noureen",
+        role: "Co-Founder, Femi Safe",
+        image: "/speakers/new-2025/Aysha Noureen.JPG"
+    },
+    {
+        name: "Naseef asadullak",
+        role: "Co-Founder, FemiSafe",
+        image: "/speakers/new-2025/Naseef asadullak.JPG"
+    },
+    {
+        name: "Karan Mehta",
+        role: "Co-Founder, Toprankers",
+        image: "/speakers/new-2025/karan-mehta.JPG"
+    },
+    {
         name: "Mr. Samar Singla",
         role: "Founder, Jugnoo",
         image: "/speakers/1.samar singla.jpg"
