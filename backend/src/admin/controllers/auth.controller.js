@@ -16,14 +16,14 @@ export const adminLogin = async (req, res, next) => {
   }
 };
 
-export const createAdminController = async (req, res, next) => {
-  try {
-    const data = await createAdminService(req.body);
+// export const createAdminController = async (req, res, next) => {
+//   try {
+//     const data = await createAdminService(req.body);
 
-    res.status(201).json(
-      new ApiResponse(true, "Admin created successfully", data)
-    );
-  } catch (error) {
-    next(error);
-  }
-};
+//     res.status(201).json(
+//       new ApiResponse(true, "Admin created successfully", data)
+//     );
+//   } catch (error) {
+//     next(error);
+//   }
+// };
