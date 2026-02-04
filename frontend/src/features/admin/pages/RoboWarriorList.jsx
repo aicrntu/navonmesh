@@ -60,10 +60,10 @@ export default function RoboWarriorList() {
               <th className="px-3 py-3 text-left">State</th>
               <th className="px-3 py-3 text-left">Pincode</th>
               <th className="px-3 py-3 text-left">Role</th>
-              <th className="px-3 py-3 text-left">Organization</th>
-              <th className="px-3 py-3 text-left">Points</th>
+              <th className="px-3 py-3 text-left">Institute</th>
+              <th className="px-3 py-3 text-left">Team Size</th>
               <th className="px-3 py-3 text-left">Date</th>
-              <th className="px-3 py-3 text-left">Abstract</th>
+              <th className="px-3 py-3 text-left">Presentation</th>
             </tr>
           </thead>
 
@@ -83,9 +83,9 @@ export default function RoboWarriorList() {
                 <td className="px-3 py-3">{item.state}</td>
                 <td className="px-3 py-3">{item.pincode}</td>
                 <td className="px-3 py-3">{item.whoAreYou}</td>
-                <td className="px-3 py-3">{item.organizationName}</td>
+                <td className="px-3 py-3">{item.institute}</td>
                 <td className="px-3 py-3 font-bold text-gray-700">
-                  {item.points}
+                  {item.numberOfTeam}
                 </td>
 
                 <td className="px-3 py-3 text-gray-500">
@@ -97,9 +97,9 @@ export default function RoboWarriorList() {
                 </td>
 
                 <td className="px-3 py-3">
-                  {item.abstractFile ? (
+                  {item.presentation ? (
                     <a
-                      href={`${BACKEND_URL}/${item.abstractFile}`}
+                      href={`${BACKEND_URL}/${item.presentation}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:underline font-medium"

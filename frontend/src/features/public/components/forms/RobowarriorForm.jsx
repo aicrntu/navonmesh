@@ -7,9 +7,8 @@ import {
     Building,
     GraduationCap,
     Calendar,
-    Github,
-    Code,
     FileText,
+    Users,
 } from "lucide-react";
 import { roboWarriorForm } from "../../../../api/robowarrior.api";
 
@@ -24,9 +23,8 @@ const RobowarriorForm = () => {
         institute: "",
         year: "",
         degree: "",
-        githubLink: "",
-        technologies: "",
-        project: null,
+        numberOfTeam: "",
+        presentation: null,
     };
 
     const [formData, setFormData] = useState(initialState);
@@ -201,7 +199,7 @@ const RobowarriorForm = () => {
                                 />
                             </div>
 
-                            <div className="relative md:col-span-2">
+                            <div className="relative">
                                 <GraduationCap className={iconClass} />
                                 <input
                                     name="degree"
@@ -211,35 +209,12 @@ const RobowarriorForm = () => {
                                     className={inputClass}
                                 />
                             </div>
-                        </div>
-                    </section>
-
-                    {/* PROJECT DETAILS */}
-                    <section>
-                        <div className="flex items-center gap-2 mb-6 border-b pb-2">
-                            <Code className="w-5 h-5 text-[#008fad]" />
-                            <h3 className="text-lg font-bold text-gray-800">
-                                Project Details
-                            </h3>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="relative">
-                                <Github className={iconClass} />
-                                <input
-                                    name="githubLink"
-                                    placeholder="GitHub Repository Link"
-                                    required
-                                    onChange={handleChange}
-                                    className={inputClass}
-                                />
-                            </div>
 
                             <div className="relative">
-                                <Code className={iconClass} />
+                                <Users className={iconClass} />
                                 <input
-                                    name="technologies"
-                                    placeholder="Technologies Used"
+                                    name="numberOfTeam"
+                                    placeholder="Number of Team Members"
                                     required
                                     onChange={handleChange}
                                     className={inputClass}
@@ -247,6 +222,8 @@ const RobowarriorForm = () => {
                             </div>
                         </div>
                     </section>
+
+
 
                     {/* FILE UPLOAD */}
                     <section>
@@ -266,7 +243,7 @@ const RobowarriorForm = () => {
                                 <FileText className="w-8 h-8 text-[#008fad] opacity-60" />
                                 <input
                                     type="file"
-                                    name="project"
+                                    name="presentation"
                                     accept=".zip,.rar,.pdf,.doc,.docx"
                                     required
                                     onChange={handleChange}

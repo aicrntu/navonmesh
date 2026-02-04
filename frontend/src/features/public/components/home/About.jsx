@@ -65,19 +65,19 @@ const About = () => {
                                 About <span className="text-primary italic">Navonmesh</span>
                             </h2>
                             <div className="space-y-6">
-                                <p className="text-lg text-gray-600 leading-relaxed text-justify font-medium">
-                                    Navonmesh 2026 is a flagship initiative by E&I Cell RNTU. It's more than just an event — it's a celebration of entrepreneurship, innovation, technology, and the relentless pursuit of success.
+                                <p className="text-sm text-gray-600 leading-relaxed text-justify font-medium">
+                                    Navonmesh is Central India's Biggest Carnival: Celebrating Innovation and Creativity, presented by Scope Global Skills University (SGSU) and powered by AIC-RNTU. It's more than just an event—it's where ideas come to life, creativity flourishes, and the entrepreneurial spirit thrives. This flagship initiative brings together students, budding entrepreneurs, startups, researchers, and industry leaders on one platform to learn, compete, and grow together.
                                 </p>
-                                <p className="text-lg text-gray-600 leading-relaxed text-justify font-medium">
-                                    This extravaganza summit brings together a lineup of competitions, dynamic speakers, engaging panel discussions, and networking opportunities for the entire startup ecosystem.
+                                <p className="text-sm text-gray-600 leading-relaxed text-justify font-medium">
+                                    From high-energy competitions in technology and creative fields to insightful conferences, inspiring keynote sessions, and engaging panel discussions, Navonmesh offers something for everyone passionate about innovation. It's a space where you can showcase your talent, connect with mentors and investors, discover new opportunities, and be part of a community that's shaping the future. Whether you're here to compete, collaborate, or simply get inspired, Navonmesh is where your journey towards making an impact begins.
                                 </p>
                             </div>
                         </div>
 
                         <div className="flex flex-wrap gap-4 pt-4">
-                            <button className="px-10 py-5 bg-gray-900 hover:bg-primary text-white font-black rounded-2xl transition-all hover:scale-105 shadow-2xl shadow-primary/10 tracking-widest text-xs uppercase">
+                            {/* <button className="px-10 py-5 bg-gray-900 hover:bg-primary text-white font-black rounded-2xl transition-all hover:scale-105 shadow-2xl shadow-primary/10 tracking-widest text-xs uppercase">
                                 Explore The Summit
-                            </button>
+                            </button> */}
                         </div>
                     </motion.div>
 
