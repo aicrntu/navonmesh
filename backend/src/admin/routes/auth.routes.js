@@ -9,6 +9,6 @@ import { validateCreateAdmin } from "../validators/admin.validator.js";
 const router = express.Router();
 
 router.post("/login", adminLogin);
-router.post("/create", validateCreateAdmin, createAdminController);
+//router.post("/create", validateCreateAdmin, createAdminController);
 
 export default router;
