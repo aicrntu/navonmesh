@@ -114,14 +114,14 @@ const Navbar = () => {
                         </a>
                     ))}
 
-                    <button className={cn(
+                    <a href="#events"><button className={cn(
                         "px-4 py-1.5 rounded-full text-xs font-bold tracking-wider shadow-lg transition-all hover:scale-105 active:scale-95 border",
                         (isScrolled || isHovered)
                             ? "bg-primary text-white border-transparent hover:bg-white hover:text-black"
                             : "bg-white/10 text-white border-white/20 hover:bg-white/30 backdrop-blur-sm"
                     )}>
                         REGISTER
-                    </button>
+                    </button></a>
                 </div>
 
                 {/* Mobile Menu Button */}

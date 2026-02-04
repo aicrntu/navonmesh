@@ -11,49 +11,38 @@ const SLIDES = [
         id: 1,
         image: "/slider/croud-navonmesh (1).jpg",
         logo: "/logo/Navonmesh 2026.png",
-        title: "Blaze Startup Trails",
-        description: "Navonmesh 2026 is RNTU’s flagship innovation fest bringing founders, creators, and future leaders together.",
-        cta: "REGISTER NOW"
-    },
-    {
-        id: 2,
-        image: "/slider/ckeck (1).jpg",
-        logo: "/logo/Navonmesh 2026.png",
-        title: "Secure Your Digital World",
-        description: "Advanced protection for modern threats. Stay ahead of the curve with our security protocols.",
-        cta: "Get Protected"
+        title: "AI Arena: Where Minds Meet Machines",
+        description: "Present groundbreaking research, engage with cutting-edge papers, and learn from industry leaders shaping AI's future. Where academic excellence meets real-world innovation.",
+        cta: "REGISTER NOW",
+        path: "https://conference.sgsuniversity.ac.in/",
+        isExternal: true
     },
     {
         id: 3,
         image: "/slider/rohit.JPG",
         logo: "/logo/Navonmesh 2026.png",
-        title: "Level Up Your Experience",
-        description: "Immersive technologies that blur the line between reality and the digital realm.",
-        cta: "Start Playing"
+        title: "The Innovation Forge: Building Tomorrow's Breakthroughs",
+        description: "Transform bold ideas into real solutions. Access tools, mentorship, and resources to build innovations that matter. From concept to creation—we fuel your journey.",
+        cta: "REGISTER NOW",
+        path: "#events"
     },
     {
         id: 4,
-        image: "/slider/aman (1).jpg",
+        image: "/slider/santosh.JPG",
         logo: "/logo/Navonmesh 2026.png",
-        title: "Leading with Vision",
-        description: "Empowering the next generation of innovators through mentorship and guidance.",
-        cta: "Meet the Team"
-    },
-    {
-        id: 5,
-        image: "/slider/ronald (1).jpg",
-        logo: "/logo/Navonmesh 2026.png",
-        title: "Showcasing Talent",
-        description: "Highlighting the incredible achievements and creativity of our student community.",
-        cta: "View Gallery"
+        title: "The Artist's Stage: Spotlight on Creative Excellence",
+        description: "Showcase your talent, connect with audiences, and turn creative passion into celebrated success. Your platform to shine and make your mark.",
+        cta: "REGISTER NOW",
+        path: "#creative"
     },
     {
         id: 6,
-        image: "/slider/santosh.JPG",
+        image: "/slider/aman (1).jpg",
         logo: "/logo/Navonmesh 2026.png",
-        title: "Where Ideas Take Flight",
-        description: "A collaborative space for thinkers and doers to come together and build the future.",
-        cta: "Join Us"
+        title: "The Inspiration Vault: Stories That Spark Greatness",
+        description: "Hear from champions and trailblazers who've made their mark. Let their strategies, stories, and insights fuel your competitive spirit and guide your path.",
+        cta: "REGISTER NOW",
+        path: "#events"
     }
 ];
 
@@ -218,10 +207,15 @@ const HeroCrousal = () => {
                                 animate="visible"
                                 exit="exit"
                             >
-                                <button className="group relative flex items-center gap-2 overflow-hidden rounded-full bg-primary px-5 py-2.5 text-xs text-white shadow-xl transition-all hover:bg-secondary hover:scale-105 active:scale-95">
+                                <a
+                                    href={SLIDES[current].path}
+                                    target={SLIDES[current].isExternal ? "_blank" : "_self"}
+                                    rel={SLIDES[current].isExternal ? "noopener noreferrer" : ""}
+                                    className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-primary px-5 py-2.5 text-xs text-white shadow-xl transition-all hover:bg-secondary hover:scale-105 active:scale-95"
+                                >
                                     <span className="relative z-10 font-semibold tracking-wide">{SLIDES[current].cta}</span>
                                     <ArrowRight className="relative z-10 h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-                                </button>
+                                </a>
                             </motion.div>
                         </div>
                     </div>

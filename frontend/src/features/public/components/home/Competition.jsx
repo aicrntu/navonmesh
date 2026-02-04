@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, Rocket, Code, Hammer, Users, BookOpen, ChefHat, Mic, Music, ArrowRight } from 'lucide-react';
 import { clsx } from 'clsx';
@@ -164,6 +164,25 @@ const CompetitionCard = ({ item, index, leagueType }) => {
 
 const Competition = () => {
     const [activeTab, setActiveTab] = useState('innovation');
+    useEffect(() => {
+        const handleHashChange = () => {
+            const hash = window.location.hash;
+            if (hash === '#creative') {
+                setActiveTab('creative');
+                // Manually scroll because the section id is 'events'
+                const element = document.getElementById('events');
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else if (hash === '#events') {
+                setActiveTab('innovation');
+            }
+        };
+
+        handleHashChange();
+        window.addEventListener('hashchange', handleHashChange);
+        return () => window.removeEventListener('hashchange', handleHashChange);
+    }, []);
 
     return (
         <section id="events" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
