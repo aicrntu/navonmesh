@@ -11,7 +11,7 @@ import {
     Code,
     FileText,
 } from "lucide-react";
-import { robowarriorForm } from "../../../../api/robowarrior.api";
+import { roboWarriorForm } from "../../../../api/robowarrior.api";
 
 const RobowarriorForm = () => {
     const initialState = {
@@ -50,7 +50,7 @@ const RobowarriorForm = () => {
                 payload.append(key, value)
             );
 
-            await robowarriorForm(payload);
+            await roboWarriorForm(payload);
             alert("Robowarrior registration successful 🎉");
 
             setFormData(initialState);

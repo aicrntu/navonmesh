@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { getAllPlanx } from "../../../api/planx.api";
+import { useAdminList } from "../../../hooks/useAdminList";
+import { exportToExcel } from "../../../utils/excelExport";
+import { Download, Search, ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function PlanxList() {
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
@@ -9,9 +12,40 @@ export default function PlanxList() {
     getAllPlanx().then((res) => setData(res.data.data));
   }, []);
 
+  const {
+    searchQuery,
+    handleSearch,
+    currentPage,
+    totalPages,
+    handlePageChange,
+    paginatedData,
+    totalItems,
+  } = useAdminList(data, 10);
+
   return (
     <div className="p-3">
-      <h1 className="text-2xl font-bold mb-6">PlanX Submissions</h1>
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+        <h1 className="text-2xl font-bold">PlanX Submissions</h1>
+        <div className="flex flex-col md:flex-row gap-3">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
+            <input
+              type="text"
+              placeholder="Search submissions..."
+              value={searchQuery}
+              onChange={(e) => handleSearch(e.target.value)}
+              className="pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none w-full md:w-64"
+            />
+          </div>
+          <button
+            onClick={() => exportToExcel(data, "PlanX_Submissions")}
+            className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition"
+          >
+            <Download className="w-4 h-4" />
+            Export Excel
+          </button>
+        </div>
+      </div>
 
       <div className="overflow-x-auto rounded-lg shadow border">
         <table className="min-w-full bg-white text-sm">
@@ -35,15 +69,15 @@ export default function PlanxList() {
           </thead>
 
           <tbody>
-            {data.map((item, index) => (
+            {paginatedData.map((item, index) => (
               <tr
                 key={item._id}
-                className={`border-t hover:bg-gray-50 ${
-                  index % 2 === 0 ? "bg-white" : "bg-gray-50/40"
-                }`}
+                className={`border-t hover:bg-gray-50 ${index % 2 === 0 ? "bg-white" : "bg-gray-50/40"
+                  }`}
               >
-                {/* S.No */}
-                <td className="px-3 py-3 font-medium">{index + 1}</td>
+                <td className="px-3 py-3 font-medium">
+                  {(currentPage - 1) * 10 + index + 1}
+                </td>
 
                 <td className="px-3 py-3 font-medium">{item.name}</td>
                 <td className="px-3 py-3">{item.email}</td>
@@ -56,7 +90,6 @@ export default function PlanxList() {
                 <td className="px-3 py-3">{item.emailOfTeam}</td>
                 <td className="px-3 py-3">{item.teamDetail}</td>
 
-                {/* Long text – keep readable */}
                 <td
                   className="px-3 py-3 max-w-xs truncate"
                   title={item.aboutStartup}
@@ -71,8 +104,7 @@ export default function PlanxList() {
                     <span>Date not found</span>
                   )}
                 </td>
-                
-                {/* Presentation */}
+
                 <td className="px-3 py-3">
                   {item.presentation ? (
                     <a
@@ -89,13 +121,9 @@ export default function PlanxList() {
                 </td>
               </tr>
             ))}
-
-            {data.length === 0 && (
+            {paginatedData.length === 0 && (
               <tr>
-                <td
-                  colSpan="13"
-                  className="px-4 py-6 text-center text-gray-500"
-                >
+                <td colSpan="14" className="px-4 py-6 text-center text-gray-500">
                   No submissions found
                 </td>
               </tr>
@@ -103,6 +131,38 @@ export default function PlanxList() {
           </tbody>
         </table>
       </div>
+
+      {/* Pagination Controls */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-between mt-6 bg-white p-4 rounded-lg border shadow-sm">
+          <div className="text-sm text-gray-500">
+            Showing <span className="font-medium">{(currentPage - 1) * 10 + 1}</span> to{" "}
+            <span className="font-medium">
+              {Math.min(currentPage * 10, totalItems)}
+            </span>{" "}
+            of <span className="font-medium">{totalItems}</span> results
+          </div>
+          <div className="flex gap-2">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="p-2 border rounded hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <div className="flex items-center px-4 text-sm font-medium">
+              Page {currentPage} of {totalPages}
+            </div>
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="p-2 border rounded hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

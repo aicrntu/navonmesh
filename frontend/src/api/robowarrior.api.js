@@ -1,10 +1,10 @@
 import api from "./axios";
 
-export const getAllRobo = () =>
+export const getAllRoboWarrior = () =>
     api.get("/admin/robo");
 
-export const getRoboById = (id) =>
+export const getRoboWarriorById = (id) =>
     api.get(`/admin/robo/${id}`);
 
-export const robowarriorForm = (data) =>
+export const roboWarriorForm = (data) =>
     api.post("/robowarrior", data);

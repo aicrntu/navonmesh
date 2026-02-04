@@ -35,6 +35,12 @@ import BinarryBattleList from "../features/admin/pages/BinarryBattleList";
 import RoboWarriorList from "../features/admin/pages/RoboWarriorList";
 import ContactList from "../features/admin/pages/ContactList";
 import InnomakerList from "../features/admin/pages/InnomakerList";
+import ChefArenaList from "../features/admin/pages/ChefArenaList";
+import SoloSpotlightList from "../features/admin/pages/SoloSpotlightList";
+import CrewClashList from "../features/admin/pages/CrewClashList";
+import MicDropList from "../features/admin/pages/MicDropList";
+import TaleTellersList from "../features/admin/pages/TaleTellersList";
+import TheEnsembleList from "../features/admin/pages/TheEnsembleList";
 
 export default function AppRouter() {
   return (
@@ -81,6 +87,12 @@ export default function AppRouter() {
         <Route path="binarrybattle" element={<BinarryBattleList />} />
         <Route path="robowarrior" element={<RoboWarriorList />} />
         <Route path="innomaker" element={<InnomakerList />} />
+        <Route path="chefarena" element={<ChefArenaList />} />
+        <Route path="solospotlight" element={<SoloSpotlightList />} />
+        <Route path="crewclash" element={<CrewClashList />} />
+        <Route path="micdrop" element={<MicDropList />} />
+        <Route path="taletellers" element={<TaleTellersList />} />
+        <Route path="theensemble" element={<TheEnsembleList />} />
         <Route path="contact" element={<ContactList />} />
       </Route>
     </Routes>

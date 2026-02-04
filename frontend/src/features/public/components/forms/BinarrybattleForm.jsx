@@ -11,7 +11,7 @@ import {
     Code,
     FileText,
 } from "lucide-react";
-import { binarrybattleForm } from "../../../../api/binarrybattle.api";
+import { binaryBattleForm } from "../../../../api/binarrybattle.api";
 
 const BinarryBattleForm = () => {
     const initialState = {
@@ -50,7 +50,7 @@ const BinarryBattleForm = () => {
                 payload.append(key, value)
             );
 
-            await binarrybattleForm(payload);
+            await binaryBattleForm(payload);
             alert("Binary Battle registration successful 🎉");
 
             setFormData(initialState);

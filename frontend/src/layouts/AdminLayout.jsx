@@ -6,10 +6,9 @@ export default function AdminLayout() {
   const [open, setOpen] = useState(false);
 
   const linkClass = (path) =>
-    `block px-4 py-3 rounded-lg font-semibold transition ${
-      pathname === path
-        ? "bg-blue-600 text-white"
-        : "text-gray-300 hover:bg-gray-800 hover:text-white"
+    `block px-4 py-3 rounded-lg font-semibold transition ${pathname === path
+      ? "bg-blue-600 text-white"
+      : "text-gray-300 hover:bg-gray-800 hover:text-white"
     }`;
 
   return (
@@ -65,6 +64,27 @@ export default function AdminLayout() {
 
           <Link to="/admin/innomaker" className={linkClass("/admin/innomaker")}>
             Innomaker
+          </Link>
+          <Link to="/admin/chefarena" className={linkClass("/admin/chefarena")}>
+            Chef Arena
+          </Link>
+          <Link
+            to="/admin/solospotlight"
+            className={linkClass("/admin/solospotlight")}
+          >
+            Solo Spotlight
+          </Link>
+          <Link to="/admin/crewclash" className={linkClass("/admin/crewclash")}>
+            Crew Clash
+          </Link>
+          <Link to="/admin/micdrop" className={linkClass("/admin/micdrop")}>
+            Mic Drop
+          </Link>
+          <Link to="/admin/taletellers" className={linkClass("/admin/taletellers")}>
+            Tale Tellers
+          </Link>
+          <Link to="/admin/theensemble" className={linkClass("/admin/theensemble")}>
+            The Ensemble
           </Link>
         </nav>
       </aside>
