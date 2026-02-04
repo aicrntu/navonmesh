@@ -6,7 +6,11 @@ import errorHandler from "./middlewares/error.middleware.js";
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:5173", "https://yourdomain.com"];
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://65.1.150.253",
+  "https://yourdomain.com",
+];
 
 app.use(
   cors({
@@ -14,14 +18,17 @@ app.use(
       if (!origin || allowedOrigins.includes(origin)) {
         callback(null, true);
       } else {
-        callback(new Error("Not allowed by CORS"));
+        callback(null, false); // IMPORTANT: no Error thrown
       }
     },
     credentials: true,
-  }),
+  })
 );
 
+
 app.use(express.json());
+
+app.use(express.urlencoded({ extended: true }));
 
 app.use("/api", mainRoutes);
 
