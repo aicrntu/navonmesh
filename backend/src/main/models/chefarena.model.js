@@ -8,7 +8,6 @@ const chefArenaSchema = mongoose.Schema(
         },
         pincode: {
             type: String,
-            required: true,
         },
         paymentScreenshot: {
             type: String,
@@ -36,7 +35,6 @@ const chefArenaSchema = mongoose.Schema(
         },
         whereDidYouHear: {
             type: String,
-            required: true,
         }
     },
     {

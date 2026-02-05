@@ -48,7 +48,6 @@ const binarybattleSchema = new mongoose.Schema(
     },
     presentation: {
       type: String,
-      required: true,
     },
     paymentScreenshot: {
       type: String,
