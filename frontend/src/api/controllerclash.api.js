@@ -6,5 +6,5 @@ export const getAllControllerClash = () =>
 export const getControllerClashById = (id) =>
     api.get(`/admin/controllerclash/${id}`);
 
-export const controllerClashForm = (data) =>
+export const controllerclashForm = (data) =>
     api.post("/controllerclash", data);

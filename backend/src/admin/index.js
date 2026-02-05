@@ -13,7 +13,7 @@ import crewclashRoutes from "./routes/crewclash.routes.js";
 import micdropRoutes from "./routes/micdrop.routes.js";
 import taletellersRoutes from "./routes/taletellers.routes.js";
 import theensembleRoutes from "./routes/theensemble.routes.js";
-import controllerClashRoutes from "./routes/controllerclash.routes.js";
+import controllerclashRoutes from "./routes/controllerclash.routes.js";
 import authMiddleware from "../middlewares/auth.middleware.js";
 
 const router = express.Router();
@@ -35,6 +35,6 @@ router.use("/crewclash", crewclashRoutes);
 router.use("/micdrop", micdropRoutes);
 router.use("/taletellers", taletellersRoutes);
 router.use("/theensemble", theensembleRoutes);
-router.use("/controllerclash", controllerClashRoutes);
+router.use("/controllerclash", controllerclashRoutes);
 
 export default router;

@@ -10,7 +10,7 @@ import {
     FileText,
     Users,
 } from "lucide-react";
-import { controllerClashForm } from "../../../../api/controllerclash.api";
+import { controllerclashForm } from "../../../../api/controllerclash.api";
 
 const ControllerClashForm = () => {
     const initialState = {
@@ -49,7 +49,7 @@ const ControllerClashForm = () => {
                 }
             });
 
-            await controllerClashForm(payload);
+            await controllerclashForm(payload);
             alert("Controller Clash registration successful 🎉");
 
             setFormData(initialState);

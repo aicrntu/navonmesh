@@ -12,7 +12,7 @@ import taletellersRoutes from "./routes/taletellers.route.js";
 import micdropRoutes from "./routes/micdrop.route.js";
 import theensembleRoutes from "./routes/theensemble.route.js";
 import chefarenaRoutes from "./routes/chefarena.route.js";
-import controllerClashRoutes from "./routes/controllerclash.route.js";
+import controllerclashRoutes from "./routes/controllerclash.route.js";
 
 const router = express.Router();
 
@@ -28,6 +28,6 @@ router.use(taletellersRoutes);
 router.use(micdropRoutes);
 router.use(theensembleRoutes);
 router.use(chefarenaRoutes);
-router.use(controllerClashRoutes);
+router.use(controllerclashRoutes);
 
 export default router;

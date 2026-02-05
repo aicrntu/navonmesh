@@ -11,7 +11,7 @@ import BinaryBattle from "../features/public/components/compititions/innovation/
 import RoboWarrior from "../features/public/components/compititions/innovation/Robowarrior";
 import Innomaker from "../features/public/components/compititions/innovation/Innomaker";
 import Admad from "../features/public/components/compititions/innovation/Admad";
-import ControllerClash from "../features/public/components/compititions/innovation/controllerClash";
+import ControllerClash from "../features/public/components/compititions/innovation/ControllerClash";
 
 // forms
 import PlanxForm from "../features/public/components/forms/PlanxForm";
