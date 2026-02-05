@@ -35,7 +35,7 @@ const BinaryBattle = () => {
     //   "UG / PG Students",
     //   "Teams of 2–4 Members",
     //   "Tech Enthusiasts (≤ 25 Years)",
-      "Cash Prizes Worth ₹30,000+",
+      "Cash Prizes Worth ₹100,000",
       "Startup Ecosystem Networking",
       "Cloud & Software Credits",
       "Pre-Incubation at AIC-RNTU",

@@ -5,7 +5,8 @@ export const submitInnomaker = async (req, res, next) => {
   try {
     const data = await handleInnomakerForm({
       ...req.body,
-      presentation: req.file?.path,
+      project: req.files?.project ? req.files.project[0].path : null,
+      paymentScreenshot: req.files?.paymentScreenshot ? req.files.paymentScreenshot[0].path : null,
     });
 
     res

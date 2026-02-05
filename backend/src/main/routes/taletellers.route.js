@@ -6,6 +6,6 @@ import upload from "../../middlewares/upload.middleware.js";
 
 const router = express.Router();
 
-router.post("/taletellers", upload.single("video"), validateTaleTellers, submitTaleTellers);
+router.post("/taletellers", upload.fields([{ name: 'video', maxCount: 1 }, { name: 'paymentScreenshot', maxCount: 1 }]), validateTaleTellers, submitTaleTellers);
 
 export default router;

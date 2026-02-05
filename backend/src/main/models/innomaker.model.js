@@ -40,17 +40,24 @@ const innomakerSchema = new mongoose.Schema(
     },
     themeOfProject: {
       type: String,
-      
+
     },
     titleOfProject: {
       type: String,
-      
+
     },
     aboutProject: {
       type: String,
     },
     presentation: {
       type: String,
+    },
+    project: {
+      type: String,
+    },
+    paymentScreenshot: {
+      type: String,
+      required: true,
     },
   },
   {

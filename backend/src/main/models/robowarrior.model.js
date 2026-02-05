@@ -46,6 +46,10 @@ const RoboWarriorSchema = new mongoose.Schema(
     presentation: {
       type: String,
     },
+    paymentScreenshot: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

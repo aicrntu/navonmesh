@@ -3,7 +3,10 @@ import { handleChefArena } from "../services/chefarena.service.js";
 
 export const submitChefArena = async (req, res, next) => {
     try {
-        const data = await handleChefArena(req.body);
+        const data = await handleChefArena({
+            ...req.body,
+            paymentScreenshot: req.file?.path,
+        });
 
         res
             .status(201)

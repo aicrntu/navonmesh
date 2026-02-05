@@ -64,6 +64,7 @@ export default function AdMadList() {
               <th className="px-3 py-3 text-left">Team Size</th>
               <th className="px-3 py-3 text-left">Date</th>
               <th className="px-3 py-3 text-left">Video</th>
+              <th className="px-3 py-3 text-left">Payment</th>
             </tr>
           </thead>
 
@@ -110,11 +111,26 @@ export default function AdMadList() {
                     <span className="text-gray-400">N/A</span>
                   )}
                 </td>
+
+                <td className="px-3 py-3">
+                  {item.paymentScreenshot ? (
+                    <a
+                      href={`${BACKEND_URL}/${item.paymentScreenshot}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-600 hover:underline font-medium"
+                    >
+                      Receipt
+                    </a>
+                  ) : (
+                    <span className="text-gray-400">N/A</span>
+                  )}
+                </td>
               </tr>
             ))}
             {paginatedData.length === 0 && (
               <tr>
-                <td colSpan="11" className="px-4 py-6 text-center text-gray-500">
+                <td colSpan="12" className="px-4 py-6 text-center text-gray-500">
                   No submissions found
                 </td>
               </tr>

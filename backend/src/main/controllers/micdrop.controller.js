@@ -5,7 +5,8 @@ export const submitMicDrop = async (req, res, next) => {
     try {
         const data = await handleMicDrop({
             ...req.body,
-            video: req.file?.path,
+            video: req.files?.video ? req.files.video[0].path : null,
+            paymentScreenshot: req.files?.paymentScreenshot ? req.files.paymentScreenshot[0].path : null,
         });
 
         res

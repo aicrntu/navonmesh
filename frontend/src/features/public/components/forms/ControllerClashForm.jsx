@@ -9,6 +9,8 @@ import {
     Calendar,
     FileText,
     Users,
+    CreditCard,
+    Camera,
 } from "lucide-react";
 import { controllerclashForm } from "../../../../api/controllerclash.api";
 
@@ -79,9 +81,9 @@ const ControllerClashForm = () => {
                     <h2 className="text-3xl font-extrabold tracking-tight">
                         Controller Clash: Esport Battleground
                     </h2>
-                    <p className="mt-2 text-white/80">
+                    {/* <p className="mt-2 text-white/80">
                         Compete, Showcase Skills, and Fight for Glory
-                    </p>
+                    </p> */}
                 </div>
 
                 <form onSubmit={handleSubmit} className="p-8 md:p-12 space-y-10">
@@ -227,52 +229,35 @@ const ControllerClashForm = () => {
                         </div>
                     </section>
 
-                    {/* PAYMENT & SCANNER */}
-                    <section className="bg-gray-50 p-6 rounded-3xl border border-gray-200">
-                        <div className="text-center mb-8">
-                            <h3 className="text-2xl font-black text-gray-800 uppercase tracking-tight">
-                                Registration Details
-                            </h3>
-                            <div className="mt-4 p-4 bg-white rounded-2xl border shadow-sm inline-block">
-                                <p className="text-gray-500 text-sm font-bold uppercase tracking-widest mb-1">Registration Fee</p>
-                                <p className="text-3xl font-black text-[#008fad]">₹ 1000.00</p>
-                            </div>
+                    {/* PAYMENT DETAILS */}
+                    <section>
+                        <div className="flex items-center gap-2 mb-6 border-b border-gray-100 pb-2">
+                            <CreditCard className="w-5 h-5 text-[#008fad]" />
+                            <h3 className="text-lg font-bold text-gray-800">Payment Details</h3>
                         </div>
-
-                        <div className="flex flex-col md:flex-row items-center gap-10">
-                            <div className="flex-1 text-center space-y-4">
-                                <p className="font-bold text-gray-600 uppercase text-xs tracking-widest">Scan to Pay</p>
-                                <div className="bg-white p-4 rounded-3xl shadow-xl inline-block border-2 border-[#008fad]/20">
-                                    {/* Using a placeholder for UPI Scanner image as requested */}
-                                    <img
-                                        src="/payment/upi-scanner.png"
-                                        alt="UPI Scanner"
-                                        className="w-48 h-48 object-contain"
-                                    />
+                        <div className="space-y-6">
+                            <div className="bg-teal-50 p-6 rounded-2xl border border-teal-100 flex flex-col md:flex-row items-center gap-6">
+                                <div className="flex-1">
+                                    <h4 className="text-xl font-bold text-gray-800 mb-2">Registration Fee: ₹ 1000.00 Per Team</h4>
+                                    <p className="text-gray-600 text-sm mb-4">Scan the QR code to pay the registration fee and upload the screenshot below for verification.</p>
                                 </div>
-                                <p className="text-xs text-gray-400 font-medium italic">Pay via any UPI App (GPay, PhonePe, Paytm)</p>
+                                <div className="w-40 h-40 bg-white p-2 rounded-xl shadow-sm border border-gray-100">
+                                    <img src="/compitition/scanner-upi.jpeg" alt="UPI Scanner" className="w-full h-full object-contain" />
+                                </div>
                             </div>
 
-                            <div className="flex-1 w-full space-y-4">
-                                <label className={labelClass}>
-                                    Upload Payment Screenshot *
-                                </label>
-                                <div className="relative group p-6 bg-white border-2 border-dashed rounded-3xl hover:border-[#008fad] transition-all cursor-pointer">
+                            <div className="bg-gray-50 p-6 rounded-2xl border-2 border-dashed border-gray-200 hover:border-[#008fad] transition-colors">
+                                <label className={labelClass}>Upload Payment Screenshot *</label>
+                                <div className="flex items-center gap-4">
+                                    <Camera className="text-[#008fad] w-8 h-8 opacity-60" />
                                     <input
-                                        type="file"
                                         name="paymentScreenshot"
+                                        type="file"
                                         accept="image/*"
-                                        required
                                         onChange={handleChange}
-                                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+                                        required
+                                        className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-[#008fad] file:text-white hover:opacity-90 transition-all cursor-pointer"
                                     />
-                                    <div className="text-center">
-                                        <FileText className="w-10 h-10 text-[#008fad] mx-auto mb-2 opacity-60" />
-                                        <p className="text-sm font-bold text-gray-700">
-                                            {formData.paymentScreenshot ? formData.paymentScreenshot.name : "Click to upload image"}
-                                        </p>
-                                        <p className="text-xs text-gray-400 mt-1">PNG, JPG or JPEG up to 5MB</p>
-                                    </div>
                                 </div>
                             </div>
                         </div>

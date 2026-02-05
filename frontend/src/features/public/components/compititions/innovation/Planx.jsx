@@ -32,7 +32,7 @@ const Planx = () => {
 
         // Benefits Section (from PHP array)
         benefits: [
-            "Cash Prizes Worth ₹50,000+",
+            "Cash Prizes Worth ₹10,000",
             "Investor Feedback",
             "Strategic Networking",
             "1-on-1 Mentorship",

@@ -6,6 +6,14 @@ const chefArenaSchema = mongoose.Schema(
             type: String,
             required: true,
         },
+        pincode: {
+            type: String,
+            required: true,
+        },
+        paymentScreenshot: {
+            type: String,
+            required: true,
+        },
         contact: {
             type: String,
             required: true,

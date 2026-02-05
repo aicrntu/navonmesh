@@ -38,6 +38,10 @@ const admadSchema = mongoose.Schema(
     video: {
       type: String,
     },
+    paymentScreenshot: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

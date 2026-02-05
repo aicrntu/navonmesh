@@ -5,6 +5,6 @@ import upload from "../../middlewares/upload.middleware.js";
 
 const router = express.Router();
 
-router.post("/admad", upload.single("video"), submitAdMad);
+router.post("/admad", upload.fields([{ name: 'video', maxCount: 1 }, { name: 'paymentScreenshot', maxCount: 1 }]), submitAdMad);
 
 export default router;

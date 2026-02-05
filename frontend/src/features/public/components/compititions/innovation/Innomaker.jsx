@@ -48,7 +48,7 @@ const Innomaker = () => {
     //   "Tech Enthusiasts",
 
       // Why Participate
-      "Cash Prizes Worth ₹50,000+",
+      "Cash Prizes Worth ₹100,000",
       "Recognition & Visibility",
       "Ecosystem Networking",
       "Pre-Incubation at AIC-RNTU",

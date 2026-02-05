@@ -5,6 +5,11 @@ import express from "express";
 
 const router = express.Router();
 
-router.post("/robowarrior", upload.single("presentation"), validateRoboWarrior, submitRoboWarrior);
+router.post(
+    "/robowarrior",
+    upload.fields([{ name: 'presentation', maxCount: 1 }, { name: 'paymentScreenshot', maxCount: 1 }]),
+    validateRoboWarrior,
+    submitRoboWarrior,
+);
 
 export default router;

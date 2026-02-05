@@ -5,7 +5,8 @@ export const submitPlanxForm = async (req, res, next) => {
   try {
     const data = await handlePlanxForm({
       ...req.body,
-      presentation: req.file?.path,
+      presentation: req.files?.presentation ? req.files.presentation[0].path : null,
+      paymentScreenshot: req.files?.paymentScreenshot ? req.files.paymentScreenshot[0].path : null,
     });
 
     res

@@ -46,6 +46,14 @@ const binarybattleSchema = new mongoose.Schema(
     technologies: {
       type: String,
     },
+    presentation: {
+      type: String,
+      required: true,
+    },
+    paymentScreenshot: {
+      type: String,
+      required: true,
+    },
     project: {
       type: String,
       required: true,

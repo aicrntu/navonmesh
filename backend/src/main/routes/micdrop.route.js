@@ -6,6 +6,6 @@ import upload from "../../middlewares/upload.middleware.js";
 
 const router = express.Router();
 
-router.post("/micdrop", upload.single("video"), validateMicDrop, submitMicDrop);
+router.post("/micdrop", upload.fields([{ name: 'video', maxCount: 1 }, { name: 'paymentScreenshot', maxCount: 1 }]), validateMicDrop, submitMicDrop);
 
 export default router;

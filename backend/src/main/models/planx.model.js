@@ -49,6 +49,10 @@ const planXSchema = new mongoose.Schema(
     presentation: {
       type: String,
     },
+    paymentScreenshot: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,
