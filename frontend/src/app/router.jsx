@@ -11,6 +11,7 @@ import BinaryBattle from "../features/public/components/compititions/innovation/
 import RoboWarrior from "../features/public/components/compititions/innovation/Robowarrior";
 import Innomaker from "../features/public/components/compititions/innovation/Innomaker";
 import Admad from "../features/public/components/compititions/innovation/Admad";
+import ControllerClash from "../features/public/components/compititions/innovation/controllerClash";
 
 // forms
 import PlanxForm from "../features/public/components/forms/PlanxForm";
@@ -24,6 +25,7 @@ import TaleTellersForm from "../features/public/components/forms/TaleTellersForm
 import MicDropForm from "../features/public/components/forms/MicDropForm";
 import TheEnsembleForm from "../features/public/components/forms/TheEnsembleForm";
 import ChefArenaForm from "../features/public/components/forms/ChefArenaForm";
+import ControllerClashForm from "../features/public/components/forms/ControllerClashForm";
 
 // admin pages
 import Login from "../features/admin/pages/Login";
@@ -41,6 +43,7 @@ import CrewClashList from "../features/admin/pages/CrewClashList";
 import MicDropList from "../features/admin/pages/MicDropList";
 import TaleTellersList from "../features/admin/pages/TaleTellersList";
 import TheEnsembleList from "../features/admin/pages/TheEnsembleList";
+import ControllerClashList from "../features/admin/pages/ControllerClashList";
 
 export default function AppRouter() {
   return (
@@ -54,6 +57,7 @@ export default function AppRouter() {
         <Route path="/robowarrior" element={<RoboWarrior />} />
         <Route path="/innomaker" element={<Innomaker />} />
         <Route path="/admadshow" element={<Admad />} />
+        <Route path="/controllerclash" element={<ControllerClash />} />
 
         {/* forms */}
         <Route path="/planx-form" element={<PlanxForm />} />
@@ -67,6 +71,7 @@ export default function AppRouter() {
         <Route path="/micdrop-form" element={<MicDropForm />} />
         <Route path="/theensemble-form" element={<TheEnsembleForm />} />
         <Route path="/chefarena-form" element={<ChefArenaForm />} />
+        <Route path="/controllerclash-form" element={<ControllerClashForm />} />
       </Route>
 
       {/* ADMIN */}
@@ -93,6 +98,7 @@ export default function AppRouter() {
         <Route path="micdrop" element={<MicDropList />} />
         <Route path="taletellers" element={<TaleTellersList />} />
         <Route path="theensemble" element={<TheEnsembleList />} />
+        <Route path="controllerclash" element={<ControllerClashList />} />
         <Route path="contact" element={<ContactList />} />
       </Route>
     </Routes>

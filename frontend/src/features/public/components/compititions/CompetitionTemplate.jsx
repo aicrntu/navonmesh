@@ -69,7 +69,7 @@ const CompetitionTemplate = ({ data }) => {
                     className="relative z-10 max-w-4xl"
                 >
                     <img src={data.logo} alt="Logo" className="h-24 md:h-32 mb-8 mx-auto filter drop-shadow-2xl" />
-                    <h1 className="text-4xl md:text-7xl font-black text-gray-900 leading-tight tracking-tighter mb-8 uppercase">
+                    <h1 className="text-xl md:text-xl font-black text-gray-900 leading-tight tracking-tighter mb-8 uppercase">
                         {data.heroTitlePart1} <span className="text-primary italic">{data.heroTitlePart2}</span>
                     </h1>
                     {data.registrationLink.startsWith('/') ? (
@@ -112,7 +112,7 @@ const CompetitionTemplate = ({ data }) => {
                             viewport={{ once: true }}
                             className="space-y-6"
                         >
-                            <span className="text-xs font-black text-primary uppercase tracking-[0.3em]">The Competition</span>
+                            {/* <span className="text-xs font-black text-primary uppercase tracking-[0.3em]">The Competition</span> */}
                             <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter uppercase leading-none">
                                 {data.aboutTitle}
                             </h2>

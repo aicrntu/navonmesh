@@ -100,11 +100,16 @@ const Footer = () => {
                     {/* Column 1: Brand */}
                     <div className="space-y-6">
                         <div className="space-y-3">
-                            <h2 className="text-3xl font-black text-white uppercase tracking-tighter">
+                            <img
+                                src="/logo/Scope-Logo (1).png"
+                                alt="Navonmesh 2026"
+                                className="h-10 brightness-0 invert opacity-80"
+                            />
+                            {/* <h2 className="text-3xl font-black text-white uppercase tracking-tighter">
                                 AIC <span className="text-primary">RNTU</span>
-                            </h2>
+                            </h2> */}
                             <p className="text-gray-400 text-sm leading-relaxed font-medium">
-                                Unlocking innovation and the entrepreneurial spirit through world-class mentorship and collaboration.
+                                Empowering the next generation of professionals through a skill-first curriculum and industry-integrated learning that bridges the gap between traditional education and global employability.
                             </p>
                         </div>
                         <img
@@ -161,7 +166,7 @@ const Footer = () => {
                                 </div>
                                 <div>
                                     <p className="text-[10px] font-bold text-white/30 uppercase tracking-widest mb-1">Email</p>
-                                    <a href="mailto:aic@rntu.ac.in" className="text-sm font-bold text-gray-200 hover:text-primary transition-colors">aic@rntu.ac.in</a>
+                                    <a href="mailto:conference@sgsuniversity.ac.in" className="text-sm font-bold text-gray-200 hover:text-primary transition-colors">conference@sgsuniversity.ac.in</a>
                                 </div>
                             </li>
                             <li className="flex gap-4">
@@ -170,7 +175,7 @@ const Footer = () => {
                                 </div>
                                 <div>
                                     <p className="text-[10px] font-bold text-white/30 uppercase tracking-widest mb-1">Phone</p>
-                                    <a href="tel:+917552700485" className="text-sm font-bold text-gray-200 hover:text-primary transition-colors">+91 755 270 0485</a>
+                                    <a href="tel:+917552700485" className="text-sm font-bold text-gray-200 hover:text-primary transition-colors">+91 982 647 4724</a>
                                 </div>
                             </li>
                             <li className="flex gap-4">
@@ -179,7 +184,8 @@ const Footer = () => {
                                 </div>
                                 <div>
                                     <p className="text-[10px] font-bold text-white/30 uppercase tracking-widest mb-1">Location</p>
-                                    <p className="text-sm font-bold text-gray-200">AIC-RNTU, Bhopal, MP</p>
+                                    <p className="text-sm font-bold text-gray-200">SGSU Campus, NH-12, Narmadapuram Rd, near Misrod,
+Bhopal, Bhairopur, Madhya Pradesh 462047</p>
                                 </div>
                             </li>
                         </ul>

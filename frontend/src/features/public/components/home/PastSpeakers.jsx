@@ -39,7 +39,13 @@ const SPEAKERS = [
     {
         name: "Mr. Ajay J Singala",
         role: "Enterprise Architect, SME, Mentor",
-        image: "/speakers/new-2025/Mr. Ajay J Singala.JPG"
+        image: "/speakers/new-2025/Ajay J Singala 1.jpg"
+    },
+
+    {
+        name: "Karan Mehta",
+        role: "Co-Founder, Toprankers",
+        image: "/speakers/new-2025/karan-mehta.JPG"
     },
     {
         name: "Anurag Asati",
@@ -49,17 +55,32 @@ const SPEAKERS = [
     {
         name: "Aysha Noureen",
         role: "Co-Founder, Femi Safe",
-        image: "/speakers/new-2025/Aysha Noureen.JPG"
+        image: "/speakers/new-2025/Noureen Aysha 1.jpg"
     },
     {
         name: "Naseef asadullak",
         role: "Co-Founder, FemiSafe",
-        image: "/speakers/new-2025/Naseef asadullak.JPG"
+        image: "/speakers/new-2025/Naseef Nazar 1.jpg"
     },
     {
-        name: "Karan Mehta",
-        role: "Co-Founder, Toprankers",
-        image: "/speakers/new-2025/karan-mehta.JPG"
+        name: "Mr. Stanley Stephen",
+        role: "Managing Director, Small Ticket Funding",
+        image: "/speakers/new-2025/Stanley Stephen.jpg"
+    },
+    {
+        name: "Mr. Kalpak Roy",
+        role: "Investment Professional",
+        image: "/speakers/new-2025/Kalpak Roy.png"
+    },
+    {
+        name: "Mr. Smridh Kohli",
+        role: "Investment Associate, Soonicorn Ventures",
+        image: "/speakers/new-2025/Mr. Smridh Kohli 2.png"
+    },
+    {
+        name: "Ms. Gunjan Verma",
+        role: "Manager, LiveDeals @tracxn",
+        image: "/speakers/new-2025/Gunjan.png"
     },
     {
         name: "Mr. Samar Singla",

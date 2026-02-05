@@ -46,7 +46,14 @@ const INNOVATION_LEAGUE = [
         subtitle: "Engineer the Warrior in You",
         icon: Bot,
         path: "/robowarrior"
+    },
+    {
+        title: "Controller Clash",
+        subtitle: "E-Sports Battlegrounds",
+        icon: BrainCircuit,
+        path: "/controllerclash"
     }
+
 ];
 
 const CREATIVE_LEAGUE = [

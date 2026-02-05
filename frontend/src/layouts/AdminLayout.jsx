@@ -86,6 +86,9 @@ export default function AdminLayout() {
           <Link to="/admin/theensemble" className={linkClass("/admin/theensemble")}>
             The Ensemble
           </Link>
+          <Link to="/admin/controllerclash" className={linkClass("/admin/controllerclash")}>
+            Controller Clash
+          </Link>
         </nav>
       </aside>
 
