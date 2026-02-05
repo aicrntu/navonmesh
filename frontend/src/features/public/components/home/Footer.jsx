@@ -251,7 +251,7 @@ Bhopal, Bhairopur, Madhya Pradesh 462047</p>
                 </div>
 
                 {/* Footer Bottom */}
-                <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                {/* <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
                     <div className="space-y-1">
                         <p className="text-xs font-bold text-white/40">© 2025 AISECT Infotech. All Rights Reserved.</p>
                         <p className="text-[10px] font-bold text-white/20 uppercase tracking-widest">Designed by AIC RNTU Developers</p>
@@ -261,7 +261,7 @@ Bhopal, Bhairopur, Madhya Pradesh 462047</p>
                         <a href="#terms" className="text-[10px] font-black text-white/30 hover:text-white transition-colors uppercase tracking-widest">Terms of Service</a>
                         <a href="#cookies" className="text-[10px] font-black text-white/30 hover:text-white transition-colors uppercase tracking-widest">Cookies</a>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             {/* Scroll to Top */}
