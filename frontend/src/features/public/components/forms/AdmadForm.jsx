@@ -23,7 +23,7 @@ const AdMadForm = () => {
     collegeName: "",
     numberOfTeamMember: "",
     video: null,
-    paymentScreenshot: null,
+    // paymentScreenshot: null,
   };
 
   const [formData, setFormData] = useState(initialState);
@@ -69,7 +69,7 @@ const AdMadForm = () => {
     "block text-sm font-semibold text-gray-600 mb-2 ml-1";
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-20">
       <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
 
         {/* HEADER */}
@@ -228,7 +228,7 @@ const AdMadForm = () => {
           </section>
 
           {/* PAYMENT DETAILS */}
-          <section>
+          {/* <section>
             <div className="flex items-center gap-2 mb-6 border-b border-gray-100 pb-2">
               <CreditCard className="w-5 h-5 text-[#008fad]" />
               <h3 className="text-lg font-bold text-gray-800">Payment Details</h3>
@@ -259,7 +259,7 @@ const AdMadForm = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* SUBMIT */}
           <button

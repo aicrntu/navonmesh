@@ -51,7 +51,6 @@ const planXSchema = new mongoose.Schema(
     },
     paymentScreenshot: {
       type: String,
-      required: true,
     },
   },
   {

@@ -1,5 +1,6 @@
 import HeroCrousal from "../components/home/HeroCrousal";
 import About from "../components/home/About";
+import IcaiSection from "../components/home/IcaiSection";
 import Competition from "../components/home/Competition";
 import PastSpeakers from "../components/home/PastSpeakers";
 import Partners from "../components/home/Partners";
@@ -10,6 +11,7 @@ export default function Home() {
     <>
       <HeroCrousal />
       <About />
+      <IcaiSection />
       <Competition />
       <PastSpeakers />
       <Partners />

@@ -10,14 +10,6 @@ import { BrainCircuit, Megaphone, Bot, User } from 'lucide-react';
 
 const INNOVATION_LEAGUE = [
     {
-        title: "ICAI",
-        subtitle: "International Conference on Emerging Technologies in AI",
-        icon: BrainCircuit,
-        isFeatured: true,
-        target: "_blank",
-        path: "https://conference.sgsuniversity.ac.in/"
-    },
-    {
         title: "PlanX",
         subtitle: "Business Plan Battle: Big Ideas Meet Bigger Opportunities",
         icon: Rocket,

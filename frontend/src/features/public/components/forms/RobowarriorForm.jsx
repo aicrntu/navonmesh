@@ -11,6 +11,7 @@ import {
     Users,
     CreditCard,
     Camera,
+    Trophy
 } from "lucide-react";
 import { roboWarriorForm } from "../../../../api/robowarrior.api";
 
@@ -25,6 +26,7 @@ const RobowarriorForm = () => {
         institute: "",
         year: "",
         degree: "",
+        category: "",
         numberOfTeam: "",
         presentation: null,
         paymentScreenshot: null,
@@ -73,7 +75,7 @@ const RobowarriorForm = () => {
         "block text-sm font-semibold text-gray-600 mb-2 ml-1";
 
     return (
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-20">
             <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
 
                 {/* HEADER */}
@@ -211,6 +213,20 @@ const RobowarriorForm = () => {
                                     onChange={handleChange}
                                     className={inputClass}
                                 />
+                            </div>
+
+                            <div className="relative">
+                                <Trophy className={iconClass} />
+                                <select
+                                    name="category"
+                                    required
+                                    onChange={handleChange}
+                                    className={inputClass}
+                                >
+                                    <option value="">Select Category</option>
+                                    <option value="Robo Fight">Robo Fight</option>
+                                    <option value="Robo Race">Robo Race</option>
+                                </select>
                             </div>
 
                             <div className="relative">

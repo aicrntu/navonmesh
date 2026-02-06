@@ -38,6 +38,11 @@ const RoboWarriorSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    category: {
+      type: String,
+      enum: ["Robo Fight", "Robo Race"],
+      required: true,
+    },
 
     numberOfTeam: {
       type: String,

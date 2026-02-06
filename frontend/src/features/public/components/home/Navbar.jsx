@@ -67,7 +67,7 @@ const Navbar = () => {
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
                 (isScrolled || isHovered)
                     ? "bg-black py-2.5 shadow-xl"
-                    : "bg-transparent py-4",
+                    : "bg-transparent py-4 bg-black/50",
                 isScrolled && !isHovered && "bg-black/90 backdrop-blur-md"
             )}
         >
@@ -81,10 +81,10 @@ const Navbar = () => {
                 >
                     <div className="relative h-9 w-auto">
                         <img
-                            src="/logo/Navonmesh 2026.png"
+                            src="/logo/Scope-Logo (1).png"
                             alt="Navonmesh Logo"
                             className={cn(
-                                "h-full w-auto object-contain transition-all duration-300 group-hover:scale-105",
+                                "h-full brightness-0 invert w-auto object-contain transition-all duration-300 group-hover:scale-105",
                                 (isScrolled || isHovered) ? "brightness-0 invert" : ""
                             )}
                         />
@@ -104,7 +104,7 @@ const Navbar = () => {
                                 "text-xs font-bold tracking-widest transition-colors duration-300",
                                 (isScrolled || isHovered)
                                     ? "text-white group-hover:text-primary"
-                                    : "text-gray-300 group-hover:text-white"
+                                    : "text-white group-hover:text-white"
                             )}>
                                 {link.name}
                             </span>

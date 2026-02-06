@@ -7,7 +7,7 @@ const PlanxForm = () => {
   const initialState = {
     name: "", email: "", number: "", state: "", pincode: "",
     whoAreYou: "", organizationName: "", teamMemberaName: "",
-    emailOfTeam: "", teamDetail: "", aboutStartup: "", presentation: null, paymentScreenshot: null,
+    emailOfTeam: "", teamDetail: "", aboutStartup: "", presentation: null, //paymentScreenshot: null,
   };
 
   const [formData, setFormData] = useState(initialState);
@@ -46,7 +46,7 @@ const PlanxForm = () => {
   const iconClass = "absolute left-3 top-1/2 -translate-y-1/2 text-[#008fad] w-5 h-5 opacity-70";
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-20">
       <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
 
         <div className="bg-[#008fad] p-8 text-center text-white">
@@ -133,7 +133,7 @@ const PlanxForm = () => {
             </div>
           </section>
 
-          <section>
+          {/* <section>
             <div className="flex items-center gap-2 mb-6 border-b border-gray-100 pb-2">
               <CreditCard className="w-5 h-5 text-[#008fad]" />
               <h3 className="text-lg font-bold text-gray-800">Payment Details</h3>
@@ -164,7 +164,7 @@ const PlanxForm = () => {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
           <button
             type="submit"

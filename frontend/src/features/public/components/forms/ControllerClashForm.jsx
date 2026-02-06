@@ -20,11 +20,27 @@ const ControllerClashForm = () => {
         captainName: "",
         captainPhone: "",
         captainEmail: "",
+        // Player 1
         playerName: "",
         bgmiIGN: "",
         bgmiPlayerId: "",
         role: "",
-        tournamentType: "",
+        // Player 2
+        player2Name: "",
+        player2IGN: "",
+        player2Id: "",
+        player2Role: "",
+        // Player 3
+        player3Name: "",
+        player3IGN: "",
+        player3Id: "",
+        player3Role: "",
+        // Player 4
+        player4Name: "",
+        player4IGN: "",
+        player4Id: "",
+        player4Role: "",
+        tournamentType: "Squad",
         paymentScreenshot: null,
     };
 
@@ -73,7 +89,7 @@ const ControllerClashForm = () => {
         "block text-sm font-semibold text-gray-600 mb-2 ml-1";
 
     return (
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-20">
             <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
 
                 {/* HEADER */}
@@ -150,82 +166,96 @@ const ControllerClashForm = () => {
                     </section>
 
                     {/* PLAYER DETAILS */}
-                    <section>
+                    <section className="space-y-12">
                         <div className="flex items-center gap-2 mb-6 border-b pb-2">
                             <User className="w-5 h-5 text-[#008fad]" />
                             <h3 className="text-lg font-bold text-gray-800">
-                                Player Details
+                                Squad Details (4 Players)
                             </h3>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="relative">
-                                <User className={iconClass} />
-                                <input
-                                    name="playerName"
-                                    placeholder="Player Name"
-                                    required
-                                    value={formData.playerName}
-                                    onChange={handleChange}
-                                    className={inputClass}
-                                />
-                            </div>
+                        {[
+                            { id: "", label: "Player 1 (Team Lead/Captain)" },
+                            { id: "2", label: "Player 2" },
+                            { id: "3", label: "Player 3" },
+                            { id: "4", label: "Player 4" }
+                        ].map((player, idx) => (
+                            <div key={idx} className="space-y-6 bg-gray-50/50 p-6 rounded-2xl border border-gray-100">
+                                <h4 className="font-bold text-[#008fad] flex items-center gap-2">
+                                    <span className="bg-[#008fad] text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">
+                                        {idx + 1}
+                                    </span>
+                                    {player.label}
+                                </h4>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div className="relative">
+                                        <User className={iconClass} />
+                                        <input
+                                            name={player.id ? `player${player.id}Name` : "playerName"}
+                                            placeholder="Player Full Name"
+                                            required
+                                            value={formData[player.id ? `player${player.id}Name` : "playerName"]}
+                                            onChange={handleChange}
+                                            className={inputClass}
+                                        />
+                                    </div>
 
-                            <div className="relative">
-                                <FileText className={iconClass} />
-                                <input
-                                    name="bgmiIGN"
-                                    placeholder="BGMI In-Game Name (IGN)"
-                                    required
-                                    value={formData.bgmiIGN}
-                                    onChange={handleChange}
-                                    className={inputClass}
-                                />
-                            </div>
+                                    <div className="relative">
+                                        <FileText className={iconClass} />
+                                        <input
+                                            name={player.id ? `player${player.id}IGN` : "bgmiIGN"}
+                                            placeholder="BGMI In-Game Name (IGN)"
+                                            required
+                                            value={formData[player.id ? `player${player.id}IGN` : "bgmiIGN"]}
+                                            onChange={handleChange}
+                                            className={inputClass}
+                                        />
+                                    </div>
 
-                            <div className="relative">
-                                <FileText className={iconClass} />
-                                <input
-                                    name="bgmiPlayerId"
-                                    placeholder="BGMI Player ID"
-                                    required
-                                    value={formData.bgmiPlayerId}
-                                    onChange={handleChange}
-                                    className={inputClass}
-                                />
-                            </div>
+                                    <div className="relative">
+                                        <FileText className={iconClass} />
+                                        <input
+                                            name={player.id ? `player${player.id}Id` : "bgmiPlayerId"}
+                                            placeholder="BGMI Player ID"
+                                            required
+                                            value={formData[player.id ? `player${player.id}Id` : "bgmiPlayerId"]}
+                                            onChange={handleChange}
+                                            className={inputClass}
+                                        />
+                                    </div>
 
-                            <div className="relative">
-                                <Users className={iconClass} />
-                                <select
-                                    name="role"
-                                    value={formData.role}
-                                    onChange={handleChange}
-                                    className={inputClass}
-                                >
-                                    <option value="">Role (Optional)</option>
-                                    <option value="IGL">IGL</option>
-                                    <option value="Assaulter">Assaulter</option>
-                                    <option value="Support">Support</option>
-                                    <option value="Sniper">Sniper</option>
-                                </select>
+                                    <div className="relative">
+                                        <Users className={iconClass} />
+                                        <select
+                                            name={player.id ? `player${player.id}Role` : "role"}
+                                            value={formData[player.id ? `player${player.id}Role` : "role"]}
+                                            onChange={handleChange}
+                                            className={inputClass}
+                                        >
+                                            <option value="">Role (Optional)</option>
+                                            <option value="IGL">IGL</option>
+                                            <option value="Assaulter">Assaulter</option>
+                                            <option value="Support">Support</option>
+                                            <option value="Sniper">Sniper</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
+                        ))}
 
-                            <div className="relative md:col-span-2">
-                                <Calendar className={iconClass} />
-                                <select
-                                    name="tournamentType"
-                                    required
-                                    value={formData.tournamentType}
-                                    onChange={handleChange}
-                                    className={inputClass}
-                                >
-                                    <option value="">Tournament Type</option>
-                                    <option value="Solo">Solo</option>
-                                    <option value="Duo">Duo</option>
-                                    <option value="Squad">Squad</option>
-                                </select>
-                            </div>
+                        <div className="relative">
+                            <label className={labelClass}>Tournament Type</label>
+                            <Calendar className={iconClass} />
+                            <select
+                                name="tournamentType"
+                                required
+                                value={formData.tournamentType}
+                                onChange={handleChange}
+                                className={inputClass}
+                                disabled
+                            >
+                                <option value="Squad">Squad Only</option>
+                            </select>
                         </div>
                     </section>
 

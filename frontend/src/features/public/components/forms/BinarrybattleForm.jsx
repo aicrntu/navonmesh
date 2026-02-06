@@ -75,7 +75,7 @@ const BinarryBattleForm = () => {
         "block text-sm font-semibold text-gray-600 mb-2 ml-1";
 
     return (
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-20">
             <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
 
                 {/* HEADER */}

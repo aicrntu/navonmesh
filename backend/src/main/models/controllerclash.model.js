@@ -32,12 +32,28 @@ const ControllerClashSchema = new mongoose.Schema(
         },
         role: {
             type: String,
-            enum: ["IGL", "Assaulter", "Support", "Sniper"],
+            enum: ["", "IGL", "Assaulter", "Support", "Sniper"],
         },
+        // Player 2
+        player2Name: { type: String, required: true },
+        player2IGN: { type: String, required: true },
+        player2Id: { type: String, required: true },
+        player2Role: { type: String, enum: ["", "IGL", "Assaulter", "Support", "Sniper"] },
+        // Player 3
+        player3Name: { type: String, required: true },
+        player3IGN: { type: String, required: true },
+        player3Id: { type: String, required: true },
+        player3Role: { type: String, enum: ["", "IGL", "Assaulter", "Support", "Sniper"] },
+        // Player 4
+        player4Name: { type: String, required: true },
+        player4IGN: { type: String, required: true },
+        player4Id: { type: String, required: true },
+        player4Role: { type: String, enum: ["", "IGL", "Assaulter", "Support", "Sniper"] },
+
         tournamentType: {
             type: String,
-            required: true,
-            enum: ["Solo", "Duo", "Squad"],
+            enum: ["Squad"],
+            default: "Squad",
         },
         paymentScreenshot: {
             type: String,

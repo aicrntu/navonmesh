@@ -10,6 +10,7 @@ import {
   UtensilsCrossed,
   CreditCard,
   Camera,
+  BookOpen,
 } from "lucide-react";
 import { chefArenaForm } from "../../../../api/chefarena.api.js";
 
@@ -69,13 +70,21 @@ const ChefArenaForm = () => {
     "absolute left-3 top-1/2 -translate-y-1/2 text-[#f44336] w-5 h-5 opacity-70";
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-20">
       <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
         {/* HEADER */}
         <div className="bg-[#f44336] p-8 text-center text-white">
           <h2 className="text-3xl font-extrabold tracking-tight underline italic decoration-white/30">
             CHEF ARENA
           </h2>
+          <a
+            href="/compitition/rule-book/RULE BOOK CHEF'S ARENA.pdf"
+            target="_blank"
+            className="mt-4 inline-flex items-center gap-2 px-6 py-2 bg-white/20 hover:bg-white/30 text-white text-sm font-bold rounded-full transition-all border border-white/30"
+          >
+            <BookOpen className="w-4 h-4" />
+            Download Rule Book
+          </a>
         </div>
 
         <form onSubmit={handleSubmit} className="p-8 md:p-12 space-y-10">

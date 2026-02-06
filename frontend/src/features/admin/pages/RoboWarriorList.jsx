@@ -61,6 +61,7 @@ export default function RoboWarriorList() {
               <th className="px-3 py-3 text-left">Pincode</th>
               <th className="px-3 py-3 text-left">Role</th>
               <th className="px-3 py-3 text-left">Institute</th>
+              <th className="px-3 py-3 text-left">Category</th>
               <th className="px-3 py-3 text-left">Team Size</th>
               <th className="px-3 py-3 text-left">Date</th>
               <th className="px-3 py-3 text-left">Presentation</th>
@@ -85,6 +86,9 @@ export default function RoboWarriorList() {
                 <td className="px-3 py-3">{item.pincode}</td>
                 <td className="px-3 py-3">{item.whoAreYou}</td>
                 <td className="px-3 py-3">{item.institute}</td>
+                <td className="px-3 py-3 font-bold text-[#008fad]">
+                  {item.category || "N/A"}
+                </td>
                 <td className="px-3 py-3 font-bold text-gray-700">
                   {item.numberOfTeam}
                 </td>

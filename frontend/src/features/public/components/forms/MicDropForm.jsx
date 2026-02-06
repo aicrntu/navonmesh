@@ -11,6 +11,7 @@ import {
     Music,
     CreditCard,
     Camera,
+    BookOpen,
 } from "lucide-react";
 import { micDropForm } from "../../../../api/micdrop.api.js";
 
@@ -70,7 +71,7 @@ const MicDropForm = () => {
         "block text-sm font-semibold text-gray-600 mb-2 ml-1";
 
     return (
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-20">
             <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
 
                 {/* HEADER */}
@@ -78,9 +79,14 @@ const MicDropForm = () => {
                     <h2 className="text-3xl font-extrabold tracking-tight underline italic decoration-white/30">
                         MIC DROP
                     </h2>
-                    {/* <p className="mt-2 text-white/80 uppercase tracking-widest font-bold text-xs">
-                        Showcase Your Flow & Drop The Beat
-                    </p> */}
+                    <a
+                        href="#"
+                        download
+                        className="mt-4 inline-flex items-center gap-2 px-6 py-2 bg-white/20 hover:bg-white/30 text-white text-sm font-bold rounded-full transition-all border border-white/30"
+                    >
+                        <BookOpen className="w-4 h-4" />
+                        Download Rule Book
+                    </a>
                 </div>
 
                 <form onSubmit={handleSubmit} className="p-8 md:p-12 space-y-10">

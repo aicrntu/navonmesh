@@ -5,6 +5,7 @@ import {
     ArrowRight,
     ExternalLink,
     Star,
+    BookOpen,
 } from "lucide-react";
 
 /**
@@ -31,26 +32,23 @@ const RoboWarriorsPage = () => {
         registrationLink: "/robowarrior-form",
 
         // About
-        aboutImage: "/compitition/robo-war/ROBO RACE -1.JPG",
         aboutTitle: "Robo Warriors",
-        aboutText: [
-            "Robo Warriors is an adrenaline-charged robotics combat event where teams design and battle powerful robots under two different categories.",
-            
-        ],
+        aboutText: "Robo Warriors is an adrenaline-charged robotics combat event where teams design and battle powerful robots under two different categories.",
 
-        // About Sub Sections
-        aboutSubSections: [
+        // Categories
+        categories: [
             {
                 title: "Robo Fight",
-                description:
-                    "The ultimate combat arena! Teams battle head-to-head using power, strategy, and durability. Your robot must survive hits, attack smartly, and dominate the opponent to win.",
+                image: "/compitition/robo-war/Robo Fight 1.JPG",
+                description: "The ultimate combat arena! Teams battle head-to-head using power, strategy, and durability. Your robot must survive hits, attack smartly, and dominate the opponent to win.",
+                rulebook: "/compitition/rule-book/Robo_Fight_Rulebook_Navonmesh 2026.pdf",
             },
             {
                 title: "Robo Race",
-                description:
-                    "A high-speed robotics challenge where bots compete on a track filled with turns, obstacles, and tricky sections. The goal is simple: finish fastest, stay stable, and prove your control + design.",
+                image: "/compitition/robo-war/ROBO RACE -1.JPG",
+                description: "A high-speed robotics challenge where bots compete on a track filled with turns, obstacles, and tricky sections. The goal is simple: finish fastest, stay stable, and prove your control + design.",
+                rulebook: "/compitition/rule-book/Robo_Race_Rulebook_Navonmesh_2026.pdf",
             }
-
         ],
 
         // Glimpses
@@ -162,52 +160,63 @@ const RoboWarriorsPage = () => {
             {/* ABOUT */}
             <section id="about" className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-8 lg:px-20">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <motion.div
-                            initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="relative group"
-                        >
-                            <img
-                                src={data.aboutImage}
-                                alt="About"
-                                className="rounded-3xl shadow-2xl relative z-10 w-full object-cover h-[500px]"
-                            />
-                            <div className="absolute -z-10 -bottom-6 -right-6 w-full h-full border-2 border-primary/20 rounded-3xl" />
-                        </motion.div>
+                    {/* Centered Heading and Intro */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center max-w-3xl mx-auto mb-20"
+                    >
+                        <h2 className="text-5xl md:text-6xl font-black text-gray-900 tracking-tighter uppercase mb-6">
+                            {data.aboutTitle}
+                        </h2>
+                        <div className="w-24 h-2 bg-primary mx-auto mb-8 rounded-full" />
+                        <p className="text-lg md:text-xl text-gray-600 font-medium leading-relaxed">
+                            {data.aboutText}
+                        </p>
+                    </motion.div>
 
-                        <motion.div
-                            initial={{ opacity: 0, x: 50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            className="space-y-6"
-                        >
-                            <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tighter uppercase leading-none">
-                                {data.aboutTitle}
-                            </h2>
-
-                            {/* About Main Text */}
-                            <div className="space-y-6 text-gray-600 font-medium text-lg text-justify leading-relaxed">
-                                {data.aboutText.map((p, i) => (
-                                    <p key={i}>{p}</p>
-                                ))}
-                            </div>
-
-                            {/* About Sub Headings */}
-                            <div className="mt-10 space-y-8">
-                                {data.aboutSubSections.map((item, i) => (
-                                    <div key={i} className="bg-gray-50 border border-gray-100 rounded-2xl p-6">
-                                        <h3 className="text-lg md:text-xl font-black uppercase tracking-tight text-gray-900 mb-2">
+                    {/* Two Column Categories Section */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                        {data.categories.map((item, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.2 }}
+                                className="group"
+                            >
+                                <div className="relative mb-8 overflow-hidden rounded-[2.5rem] shadow-2xl">
+                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent z-10 opacity-60" />
+                                    <img
+                                        src={item.image}
+                                        alt={item.title}
+                                        className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    <div className="absolute bottom-8 left-8 z-20">
+                                        <h3 className="text-3xl font-black text-white uppercase tracking-tighter">
                                             {item.title}
                                         </h3>
-                                        <p className="text-gray-600 font-medium leading-relaxed text-base text-justify">
-                                            {item.description}
-                                        </p>
                                     </div>
-                                ))}
-                            </div>
-                        </motion.div>
+                                </div>
+                                <div className="px-4 space-y-6">
+                                    <p className="text-gray-600 text-lg font-medium leading-relaxed text-justify italic border-l-4 border-primary/20 pl-6">
+                                        {item.description}
+                                    </p>
+                                    <a
+                                        href={item.rulebook}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-xs hover:underline pt-2 group/link"
+                                    >
+                                        <BookOpen className="w-4 h-4" />
+                                        Download Rule Book
+                                        <ArrowRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
+                                    </a>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -334,8 +343,8 @@ const RoboWarriorsPage = () => {
                             >
                                 <div
                                     className={`flex-1 w-full p-8 bg-gray-50 border border-gray-100 rounded-2xl ${i % 2 === 0
-                                            ? "text-left md:text-right"
-                                            : "text-left"
+                                        ? "text-left md:text-right"
+                                        : "text-left"
                                         }`}
                                 >
                                     <h4 className="font-black text-lg text-gray-900 uppercase">

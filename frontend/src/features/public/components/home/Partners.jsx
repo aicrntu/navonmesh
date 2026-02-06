@@ -7,16 +7,60 @@ const cn = (...inputs) => twMerge(clsx(inputs));
 
 const PARTNERS = [
     {
+        name: "Wizcraft Mime",
+        logo: "/partners/wizcraft-mime-logo.jpg"
+    },
+    {
+        name: "Google",
+        logo: "/partners/Google.png"
+    },
+    {
+        name: "IBM",
+        logo: "/partners/ibm.jpg"
+    },
+    {
+        name: "Reliance",
+        logo: "/partners/reliance.png"
+    },
+    {
+        name: "Hyundai",
+        logo: "/partners/Hyundai.png"
+    },
+    {
+        name: "Hero MotoCorp",
+        logo: "/partners/Hero.png"
+    },
+    {
+        name: "Tally",
+        logo: "/partners/Tally.jpg"
+    },
+    {
         name: "Scope",
         logo: "/partners/Scope.png"
     },
     {
-        name: "AI Partner",
-        logo: "/partners/ai.png"
+        name: "MEPSC",
+        logo: "/partners/MEPSC.png"
     },
     {
-        name: "AIT",
-        logo: "/partners/ait.png"
+        name: "NIEM",
+        logo: "/partners/NIEM.png"
+    },
+    {
+        name: "NRAI",
+        logo: "/partners/national-restaurant-association-india-nrai.jpg"
+    },
+    {
+        name: "GOG",
+        logo: "/partners/GOG.png"
+    },
+    {
+        name: "VVDN",
+        logo: "/partners/VVDN.png"
+    },
+    {
+        name: "AI Partner",
+        logo: "/partners/ai.png"
     },
     {
         name: "AL Partner",
@@ -25,6 +69,10 @@ const PARTNERS = [
     {
         name: "RM Partner",
         logo: "/partners/rm.png"
+    },
+    {
+        name: "AIT",
+        logo: "/partners/ait.png"
     }
 ];
 
@@ -40,7 +88,7 @@ const PartnerLogo = ({ partner, index }) => {
             <img
                 src={partner.logo}
                 alt={partner.name}
-                className="w-full h-auto max-h-24 object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                className="w-full h-auto max-h-24 object-contain grayscale-[60%] group-hover:grayscale-0 transition-all duration-300"
                 loading="lazy"
             />
         </motion.div>
