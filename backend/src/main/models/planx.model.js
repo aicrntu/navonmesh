@@ -6,6 +6,10 @@ const planXSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    startupIdeaName: {
+      type: String,
+      required: true,
+    },
     email: {
       type: String,
       required: true,

@@ -159,8 +159,8 @@ const AdMadForm = () => {
                   className={inputClass}
                 >
                   <option value="">You are a...</option>
-                  <option value="Student">Student</option>
-                  <option value="Professional">Professional</option>
+                  <option value="UG Student">UG Student</option>
+                  <option value="PG Student">PG Student</option>
                 </select>
               </div>
             </div>
@@ -201,6 +201,8 @@ const AdMadForm = () => {
               <h3 className="text-lg font-bold text-gray-800">
                 Pitch Video
               </h3>
+              
+              <p>Create an AD on Navonmesh( Max 1 min)</p>
             </div>
 
             <div className="bg-gray-50 p-6 rounded-2xl border-2 border-dashed hover:border-[#008fad] transition">

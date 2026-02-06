@@ -6,7 +6,7 @@ const PlanxForm = () => {
   const brandTeal = "rgb(0, 143, 173)";
   const initialState = {
     name: "", email: "", number: "", state: "", pincode: "",
-    whoAreYou: "", organizationName: "", teamMemberaName: "",
+    whoAreYou: "", organizationName: "", startupIdeaName: "", teamMemberaName: "",
     emailOfTeam: "", teamDetail: "", aboutStartup: "", presentation: null, //paymentScreenshot: null,
   };
 
@@ -85,11 +85,12 @@ const PlanxForm = () => {
                 <Building className={iconClass} />
                 <select name="whoAreYou" value={formData.whoAreYou} onChange={handleChange} required className={inputClass}>
                   <option value="">Current Role</option>
-                  <option value="Student">Student</option>
-                  <option value="Startup Founder">Startup Founder</option>
-                  <option value="Professional">Professional</option>
+                  <option value="UG Student">UG Student</option>
+                  <option value="PG Student">PG Student</option>
                 </select>
+                
               </div>
+              <input name="startupIdeaName" value={formData.startupIdeaName} placeholder="Startup Idea Name" onChange={handleChange} required className={inputClass.replace('pl-10', 'pl-4')} />
             </div>
           </section>
 
@@ -99,7 +100,7 @@ const PlanxForm = () => {
               <h3 className="text-lg font-bold text-gray-800">Organization & Team</h3>
             </div>
             <div className="space-y-6">
-              <input name="organizationName" value={formData.organizationName} placeholder="College / Organization Name" onChange={handleChange} required className={inputClass.replace('pl-10', 'pl-4')} />
+              <input name="organizationName" value={formData.organizationName} placeholder="College / University Name" onChange={handleChange} required className={inputClass.replace('pl-10', 'pl-4')} />
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <input name="teamMemberaName" value={formData.teamMemberaName} placeholder="Team Member Names" onChange={handleChange} required className={inputClass.replace('pl-10', 'pl-4')} />
                 <input name="emailOfTeam" type="email" value={formData.emailOfTeam} placeholder="Team Primary Email" onChange={handleChange} required className={inputClass.replace('pl-10', 'pl-4')} />

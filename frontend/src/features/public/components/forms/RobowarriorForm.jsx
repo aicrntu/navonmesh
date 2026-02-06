@@ -28,7 +28,7 @@ const RobowarriorForm = () => {
         degree: "",
         category: "",
         numberOfTeam: "",
-        presentation: null,
+        // presentation: null,
         paymentScreenshot: null,
     };
 
@@ -165,8 +165,8 @@ const RobowarriorForm = () => {
                                     className={inputClass}
                                 >
                                     <option value="">You are a...</option>
-                                    <option value="Student">Student</option>
-                                    <option value="Professional">Professional</option>
+                                    <option value="UG Student">UG Student</option>
+                                    <option value="PG Student">PG Student</option>
                                 </select>
                             </div>
                         </div>
@@ -177,7 +177,7 @@ const RobowarriorForm = () => {
                         <div className="flex items-center gap-2 mb-6 border-b pb-2">
                             <GraduationCap className="w-5 h-5 text-[#008fad]" />
                             <h3 className="text-lg font-bold text-gray-800">
-                                Academic / Professional Info
+                                Academic Details
                             </h3>
                         </div>
 
@@ -186,7 +186,7 @@ const RobowarriorForm = () => {
                                 <Building className={iconClass} />
                                 <input
                                     name="institute"
-                                    placeholder="Institute / Organization Name"
+                                    placeholder="Institute"
                                     required
                                     onChange={handleChange}
                                     className={inputClass}
@@ -197,7 +197,7 @@ const RobowarriorForm = () => {
                                 <Calendar className={iconClass} />
                                 <input
                                     name="year"
-                                    placeholder="Year / Experience"
+                                    placeholder="Year"
                                     required
                                     onChange={handleChange}
                                     className={inputClass}
@@ -208,7 +208,7 @@ const RobowarriorForm = () => {
                                 <GraduationCap className={iconClass} />
                                 <input
                                     name="degree"
-                                    placeholder="Degree / Designation"
+                                    placeholder="Degree"
                                     required
                                     onChange={handleChange}
                                     className={inputClass}
@@ -243,7 +243,7 @@ const RobowarriorForm = () => {
                     </section>
 
                     {/* FILE UPLOAD */}
-                    <section>
+                    {/* <section>
                         <div className="flex items-center gap-2 mb-6 border-b pb-2">
                             <FileText className="w-5 h-5 text-[#008fad]" />
                             <h3 className="text-lg font-bold text-gray-800">
@@ -273,7 +273,7 @@ const RobowarriorForm = () => {
                                 />
                             </div>
                         </div>
-                    </section>
+                    </section> */}
 
                     {/* PAYMENT DETAILS */}
                     < section >
@@ -308,6 +308,35 @@ const RobowarriorForm = () => {
                             </div>
                         </div>
                     </section >
+                    <div className="mt-6 rounded-2xl border border-gray-200 bg-gray-50 p-5 shadow-sm">
+                        <h3 className="text-base font-semibold text-gray-800">
+                            Terms & Conditions
+                        </h3>
+
+                        <p className="mt-2 text-sm leading-relaxed text-gray-600">
+                            I hereby declare that I have read and understood the rules and regulations of
+                            <span className="font-medium text-gray-800"> Robo Warrior</span>. I agree to abide by
+                            the guidelines outlined in the rulebook and comply with any modifications or
+                            instructions issued during the competition.
+                        </p>
+
+                        <div className="mt-4 flex items-start gap-3">
+                            <input
+                                type="checkbox"
+                                name="terms"
+                                required
+                                onChange={handleChange}
+                                className=" h-5 w-5 cursor-pointer rounded-md border-gray-300 text-[#008fad] focus:ring-2 focus:ring-[#008fad]"
+                            />
+
+                            <label className="text-sm text-gray-700">
+                                I agree to the{" "}
+                                <span className="font-semibold text-[#008fad]">
+                                    terms and conditions
+                                </span>
+                            </label>
+                        </div>
+                    </div>
 
                     {/* SUBMIT */}
                     < button

@@ -165,8 +165,8 @@ const BinarryBattleForm = () => {
                                     className={inputClass}
                                 >
                                     <option value="">You are a...</option>
-                                    <option value="Student">Student</option>
-                                    <option value="Professional">Professional</option>
+                                    <option value="UG Student">UG Student</option>
+                                    <option value="PG Student">PG Student</option>
                                 </select>
                             </div>
                         </div>
@@ -177,7 +177,7 @@ const BinarryBattleForm = () => {
                         <div className="flex items-center gap-2 mb-6 border-b pb-2">
                             <GraduationCap className="w-5 h-5 text-[#008fad]" />
                             <h3 className="text-lg font-bold text-gray-800">
-                                Academic / Professional Info
+                                Academic Details
                             </h3>
                         </div>
 
@@ -186,7 +186,7 @@ const BinarryBattleForm = () => {
                                 <Building className={iconClass} />
                                 <input
                                     name="institute"
-                                    placeholder="Institute / Organization Name"
+                                    placeholder="Institute / University Name"
                                     required
                                     onChange={handleChange}
                                     className={inputClass}
@@ -197,7 +197,7 @@ const BinarryBattleForm = () => {
                                 <Calendar className={iconClass} />
                                 <input
                                     name="year"
-                                    placeholder="Year / Experience"
+                                    placeholder="Year"
                                     required
                                     onChange={handleChange}
                                     className={inputClass}
@@ -208,7 +208,7 @@ const BinarryBattleForm = () => {
                                 <GraduationCap className={iconClass} />
                                 <input
                                     name="degree"
-                                    placeholder="Degree / Designation"
+                                    placeholder="Degree"
                                     required
                                     onChange={handleChange}
                                     className={inputClass}

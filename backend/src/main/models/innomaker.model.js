@@ -38,15 +38,18 @@ const innomakerSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    themeOfProject: {
+    projectName: {
       type: String,
-
+      required: true,
     },
-    titleOfProject: {
+    projectDescription: {
       type: String,
-
+      required: true,
     },
-    aboutProject: {
+    githubLink: {
+      type: String,
+    },
+    technologies: {
       type: String,
     },
     presentation: {

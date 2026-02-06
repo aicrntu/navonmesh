@@ -223,13 +223,13 @@ export default function ControllerClashList() {
                                 {selectedItem.paymentScreenshot ? (
                                     <div className="relative rounded-2xl overflow-hidden border-2 border-gray-100 bg-gray-50 group">
                                         <img
-                                            src={`${BACKEND_URL}/${selectedItem.paymentScreenshot}`}
+                                            src={`${BACKEND_URL}/api/${selectedItem.paymentScreenshot}`}
                                             alt="Payment Screenshot"
                                             className="max-h-96 w-full object-contain mx-auto"
                                         />
                                         <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                             <a
-                                                href={`${BACKEND_URL}/${selectedItem.paymentScreenshot}`}
+                                                href={`${BACKEND_URL}/api/${selectedItem.paymentScreenshot}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="bg-white text-black px-6 py-2 rounded-full font-bold shadow-xl hover:scale-105 transition active:scale-95"

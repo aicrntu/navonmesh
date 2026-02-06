@@ -9,7 +9,7 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:5173",
   "http://65.1.150.253",
-  "https://yourdomain.com",
+  "https://navonmeshfest.com",
 ];
 
 app.use(
@@ -30,11 +30,12 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/uploads", express.static("uploads"));
+app.use("/api/uploads", express.static("uploads"));
+
 app.use("/api", mainRoutes);
 
 app.use("/api/admin", adminRoutes);
-
-app.use("/uploads", express.static("uploads"));
 
 app.use(errorHandler);
 

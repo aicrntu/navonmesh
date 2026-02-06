@@ -59,6 +59,7 @@ export default function PlanxList() {
               <th className="px-3 py-3 text-left">Pincode</th>
               <th className="px-3 py-3 text-left">Role</th>
               <th className="px-3 py-3 text-left">Organization</th>
+              <th className="px-3 py-3 text-left">Startup Idea Name</th>
               <th className="px-3 py-3 text-left">Team Member</th>
               <th className="px-3 py-3 text-left">Team Email</th>
               <th className="px-3 py-3 text-left">Team Detail</th>
@@ -87,6 +88,7 @@ export default function PlanxList() {
                 <td className="px-3 py-3">{item.pincode}</td>
                 <td className="px-3 py-3">{item.whoAreYou}</td>
                 <td className="px-3 py-3">{item.organizationName}</td>
+                <td className="px-3 py-3 font-medium text-[#008fad]">{item.startupIdeaName}</td>
                 <td className="px-3 py-3">{item.teamMemberaName}</td>
                 <td className="px-3 py-3">{item.emailOfTeam}</td>
                 <td className="px-3 py-3">{item.teamDetail}</td>
@@ -109,7 +111,7 @@ export default function PlanxList() {
                 <td className="px-3 py-3">
                   {item.presentation ? (
                     <a
-                      href={`${BACKEND_URL}/${item.presentation}`}
+                      href={`${BACKEND_URL}/api/${item.presentation}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:underline font-medium"
@@ -124,7 +126,7 @@ export default function PlanxList() {
                 <td className="px-3 py-3">
                   {item.paymentScreenshot ? (
                     <a
-                      href={`${BACKEND_URL}/${item.paymentScreenshot}`}
+                      href={`${BACKEND_URL}/api/${item.paymentScreenshot}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-green-600 hover:underline font-medium"

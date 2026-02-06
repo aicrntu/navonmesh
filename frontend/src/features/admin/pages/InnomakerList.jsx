@@ -60,9 +60,13 @@ export default function InnomakerList() {
               <th className="px-3 py-3 text-left">State</th>
               <th className="px-3 py-3 text-left">Pincode</th>
               <th className="px-3 py-3 text-left">Role</th>
-              <th className="px-3 py-3 text-left">Organization</th>
+              <th className="px-3 py-3 text-left">Institute</th>
+              <th className="px-3 py-3 text-left">Project Name</th>
+              <th className="px-3 py-3 text-left">Project Description</th>
+              <th className="px-3 py-3 text-left">GitHub</th>
+              <th className="px-3 py-3 text-left">Technologies</th>
               <th className="px-3 py-3 text-left">Date</th>
-              <th className="px-3 py-3 text-left">Idea</th>
+              <th className="px-3 py-3 text-left">File</th>
               <th className="px-3 py-3 text-left">Payment</th>
             </tr>
           </thead>
@@ -83,7 +87,15 @@ export default function InnomakerList() {
                 <td className="px-3 py-3">{item.state}</td>
                 <td className="px-3 py-3">{item.pincode}</td>
                 <td className="px-3 py-3">{item.whoAreYou}</td>
-                <td className="px-3 py-3">{item.organizationName}</td>
+                <td className="px-3 py-3 font-medium">{item.institute}</td>
+                <td className="px-3 py-3 font-bold text-[#008fad]">{item.projectName}</td>
+                <td className="px-3 py-3 truncate max-w-[150px]" title={item.projectDescription}>{item.projectDescription}</td>
+                <td className="px-3 py-3">
+                  {item.githubLink ? (
+                    <a href={item.githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Link</a>
+                  ) : "N/A"}
+                </td>
+                <td className="px-3 py-3">{item.technologies}</td>
 
                 <td className="px-3 py-3 text-gray-500">
                   {item.createdAt ? (
@@ -94,9 +106,9 @@ export default function InnomakerList() {
                 </td>
 
                 <td className="px-3 py-3">
-                  {item.idea ? (
+                  {item.project ? (
                     <a
-                      href={`${BACKEND_URL}/${item.idea}`}
+                      href={`${BACKEND_URL}/api/${item.project}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:underline font-medium"
@@ -111,7 +123,7 @@ export default function InnomakerList() {
                 <td className="px-3 py-3">
                   {item.paymentScreenshot ? (
                     <a
-                      href={`${BACKEND_URL}/${item.paymentScreenshot}`}
+                      href={`${BACKEND_URL}/api/${item.paymentScreenshot}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-green-600 hover:underline font-medium"

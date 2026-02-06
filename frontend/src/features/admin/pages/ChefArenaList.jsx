@@ -106,7 +106,7 @@ export default function ChefArenaList() {
                                 <td className="px-3 py-3">
                                     {item.paymentScreenshot ? (
                                         <a
-                                            href={`${BACKEND_URL}/${item.paymentScreenshot}`}
+                                            href={`${BACKEND_URL}/api/${item.paymentScreenshot}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-green-600 hover:underline font-medium"

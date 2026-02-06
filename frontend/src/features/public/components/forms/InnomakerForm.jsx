@@ -28,6 +28,8 @@ const InnomakerForm = () => {
         degree: "",
         githubLink: "",
         technologies: "",
+        projectName: "",
+        projectDescription: "",
         project: null,
         paymentScreenshot: null,
     };
@@ -165,8 +167,8 @@ const InnomakerForm = () => {
                                     className={inputClass}
                                 >
                                     <option value="">You are a...</option>
-                                    <option value="Student">Student</option>
-                                    <option value="Professional">Professional</option>
+                                    <option value="UG Student">UG Student</option>
+                                    <option value="PG Student">PG Student</option>
                                 </select>
                             </div>
                         </div>
@@ -177,7 +179,7 @@ const InnomakerForm = () => {
                         <div className="flex items-center gap-2 mb-6 border-b pb-2">
                             <GraduationCap className="w-5 h-5 text-[#008fad]" />
                             <h3 className="text-lg font-bold text-gray-800">
-                                Academic / Professional Info
+                                Academic Details
                             </h3>
                         </div>
 
@@ -186,7 +188,7 @@ const InnomakerForm = () => {
                                 <Building className={iconClass} />
                                 <input
                                     name="institute"
-                                    placeholder="Institute / Organization Name"
+                                    placeholder="Institute / University Name"
                                     required
                                     onChange={handleChange}
                                     className={inputClass}
@@ -197,7 +199,7 @@ const InnomakerForm = () => {
                                 <Calendar className={iconClass} />
                                 <input
                                     name="year"
-                                    placeholder="Year / Experience"
+                                    placeholder="Year"
                                     required
                                     onChange={handleChange}
                                     className={inputClass}
@@ -208,7 +210,7 @@ const InnomakerForm = () => {
                                 <GraduationCap className={iconClass} />
                                 <input
                                     name="degree"
-                                    placeholder="Degree / Designation"
+                                    placeholder="Degree"
                                     required
                                     onChange={handleChange}
                                     className={inputClass}
@@ -226,12 +228,12 @@ const InnomakerForm = () => {
                             </h3>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="grid grid-cols-1 gap-6">
                             <div className="relative">
-                                <Github className={iconClass} />
+                                <Code className={iconClass} />
                                 <input
-                                    name="githubLink"
-                                    placeholder="GitHub Repository Link"
+                                    name="projectName"
+                                    placeholder="Project Name"
                                     required
                                     onChange={handleChange}
                                     className={inputClass}
@@ -239,14 +241,39 @@ const InnomakerForm = () => {
                             </div>
 
                             <div className="relative">
-                                <Code className={iconClass} />
-                                <input
-                                    name="technologies"
-                                    placeholder="Technologies Used"
+                                <FileText className={iconClass} />
+                                <textarea
+                                    name="projectDescription"
+                                    placeholder="Project Description"
                                     required
                                     onChange={handleChange}
-                                    className={inputClass}
+                                    rows={3}
+                                    className={inputClass.replace("py-3", "py-3 h-32") + " resize-none"}
                                 />
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div className="relative">
+                                    <Github className={iconClass} />
+                                    <input
+                                        name="githubLink"
+                                        placeholder="GitHub Repository Link"
+                                        required
+                                        onChange={handleChange}
+                                        className={inputClass}
+                                    />
+                                </div>
+
+                                <div className="relative">
+                                    <Code className={iconClass} />
+                                    <input
+                                        name="technologies"
+                                        placeholder="Technologies Used"
+                                        required
+                                        onChange={handleChange}
+                                        className={inputClass}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -293,7 +320,7 @@ const InnomakerForm = () => {
                         <div className="space-y-6">
                             <div className="bg-teal-50 p-6 rounded-2xl border border-teal-100 flex flex-col md:flex-row items-center gap-6">
                                 <div className="flex-1">
-                                    <h4 className="text-xl font-bold text-gray-800 mb-2">Registration Fee: ₹ 1000.00</h4>
+                                    <h4 className="text-xl font-bold text-gray-800 mb-2">Registration Fee: ₹ 500.00</h4>
                                     <p className="text-gray-600 text-sm mb-4">Scan the QR code to pay the registration fee and upload the screenshot below for verification.</p>
                                 </div>
                                 <div className="w-40 h-40 bg-white p-2 rounded-xl shadow-sm border border-gray-100">

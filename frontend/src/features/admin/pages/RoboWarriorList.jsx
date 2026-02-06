@@ -104,7 +104,7 @@ export default function RoboWarriorList() {
                 <td className="px-3 py-3">
                   {item.presentation ? (
                     <a
-                      href={`${BACKEND_URL}/${item.presentation}`}
+                      href={`${BACKEND_URL}/api/${item.presentation}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-600 hover:underline font-medium"
@@ -119,7 +119,7 @@ export default function RoboWarriorList() {
                 <td className="px-3 py-3">
                   {item.paymentScreenshot ? (
                     <a
-                      href={`${BACKEND_URL}/${item.paymentScreenshot}`}
+                      href={`${BACKEND_URL}/api/${item.paymentScreenshot}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-green-600 hover:underline font-medium"
