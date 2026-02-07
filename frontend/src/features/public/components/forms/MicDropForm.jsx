@@ -80,8 +80,8 @@ const MicDropForm = () => {
                         MIC DROP
                     </h2>
                     <a
-                        href="#"
-                        download
+                        href="/compitition/rule-book/RULE BOOK FOR SINGING COMPETITION NAVONMESH 2026.pdf"
+                        target="_blank"
                         className="mt-4 inline-flex items-center gap-2 px-6 py-2 bg-white/20 hover:bg-white/30 text-white text-sm font-bold rounded-full transition-all border border-white/30"
                     >
                         <BookOpen className="w-4 h-4" />

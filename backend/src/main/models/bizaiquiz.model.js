@@ -1,6 +1,12 @@
 import mongoose from "mongoose";
 
-const theEnsembleSchema = mongoose.Schema(
+const teamMemberSchema = new mongoose.Schema({
+    name: { type: String, required: true },
+    email: { type: String, required: true },
+    contact: { type: String, required: true },
+});
+
+const bizaiQuizSchema = mongoose.Schema(
     {
         name: {
             type: String,
@@ -26,23 +32,17 @@ const theEnsembleSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        socialLink: {
-            type: String,
-            required: true,
-        },
         whereDidYouHear: {
             type: String,
             required: true,
         },
-        video: {
-            type: String,
-        },
+        teamMembers: [teamMemberSchema],
     },
     {
         timestamps: true,
     }
 );
 
-const TheEnsemble = mongoose.model("TheEnsemble", theEnsembleSchema);
+const BizaiQuiz = mongoose.model("BizaiQuiz", bizaiQuizSchema);
 
-export default TheEnsemble;
+export default BizaiQuiz;

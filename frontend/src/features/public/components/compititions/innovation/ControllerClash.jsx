@@ -78,14 +78,13 @@ const ControllerClash = () => {
 
         // Timeline
         roadmap: [
-            { title: "Registration Opens", date: "" },
-            { title: "Submit Registration form", date: "" },
-            { title: "Announcement of Finalists", date: "" },
-            { title: "Final Competition 14th March", date: "" },
+            { title: "Registration Opens", date: "9th Feb" },
+            { title: "Submit Registration form", date: "5th March" },
+            { title: "Announcement of Finalists", date: "10th March" },
+            { title: "Final Competition 14th March", date: "14th March" },
         ],
 
-        // Optional
-        logo: "/compitition/controller-clash/logo.png", // change if you have
+        logo: "/compitition/controller-clash/logo.png",
     };
 
     return (
@@ -299,8 +298,8 @@ const ControllerClash = () => {
                             >
                                 <div
                                     className={`flex-1 w-full p-8 bg-gray-50 border border-gray-100 rounded-2xl ${i % 2 === 0
-                                            ? "text-left md:text-right"
-                                            : "text-left"
+                                        ? "text-left md:text-right"
+                                        : "text-left"
                                         }`}
                                 >
                                     <h4 className="font-black text-lg text-gray-900 uppercase">

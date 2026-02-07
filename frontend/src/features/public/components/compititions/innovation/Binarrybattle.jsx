@@ -32,9 +32,9 @@ const BinaryBattle = () => {
 
     // Who Can Apply + Why Participate (merged into benefits because template uses one list)
     benefits: [
-    //   "UG / PG Students",
-    //   "Teams of 2–4 Members",
-    //   "Tech Enthusiasts (≤ 25 Years)",
+      //   "UG / PG Students",
+      //   "Teams of 2–4 Members",
+      //   "Tech Enthusiasts (≤ 25 Years)",
       "Cash Prizes Worth ₹100,000",
       "Startup Ecosystem Networking",
       "Cloud & Software Credits",
@@ -52,13 +52,14 @@ const BinaryBattle = () => {
 
     // Timeline
     roadmap: [
-      { title: "Call for Application", date: "" },
-      { title: "Last Date to Apply", date: "" },
-      { title: "Shortlisting Announcement", date: "" },
-      { title: "Pre-Finale Pitching", date: "" },
-      { title: "24-Hour Coding Battle", date: "" },
-      { title: "Final Product Presentation", date: "" },
+      { title: "Call for Application", date: "10th Feb" },
+      { title: "Last Date to Apply", date: "5th March" },
+      { title: "Shortlisting Announcement", date: "8th March" },
+      { title: "Pre-Finale Pitching", date: "10th March" },
+      { title: "24-Hour Coding Battle", date: "14th March (9:00 AM Start)" },
+      { title: "Final Product Presentation", date: "15th March" },
     ],
+
   };
 
   return <CompetitionTemplate data={battleData} />;

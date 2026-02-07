@@ -83,8 +83,8 @@ export default function AdminLayout() {
           <Link to="/admin/taletellers" className={linkClass("/admin/taletellers")}>
             Tale Tellers
           </Link>
-          <Link to="/admin/theensemble" className={linkClass("/admin/theensemble")}>
-            The Ensemble
+          <Link to="/admin/bizaiquiz" className={linkClass("/admin/bizaiquiz")}>
+            Bizai Quiz
           </Link>
           <Link to="/admin/controllerclash" className={linkClass("/admin/controllerclash")}>
             Controller Clash

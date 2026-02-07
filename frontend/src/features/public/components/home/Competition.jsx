@@ -80,10 +80,10 @@ const CREATIVE_LEAGUE = [
         path: "/micdrop-form"
     },
     {
-        title: "The Ensemble",
-        subtitle: "Band Championship",
-        icon: Music,
-        path: "/theensemble-form"
+        title: "Bizai Quiz",
+        subtitle: "The Ultimate Business & AI Quiz",
+        icon: BrainCircuit,
+        path: "/bizaiquiz-form"
     }
 ];
 

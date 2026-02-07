@@ -233,6 +233,7 @@ const HeroCrousal = () => {
                                 initial="hidden"
                                 animate="visible"
                                 exit="exit"
+                                className="flex flex-col gap-4 sm:gap-6"
                             >
                                 <a
                                     href={SLIDES[current].path}
@@ -245,6 +246,7 @@ const HeroCrousal = () => {
                     text-[11px] sm:text-xs text-white
                     shadow-xl transition-all
                     hover:bg-secondary hover:scale-105 active:scale-95
+                    w-fit
                   "
                                 >
                                     <span className="relative z-10 font-semibold tracking-wide">
@@ -252,6 +254,18 @@ const HeroCrousal = () => {
                                     </span>
                                     <ArrowRight className="relative z-10 h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
                                 </a>
+
+                                {/* Powered By Section */}
+                                <div className="flex flex-col  items-start gap-3 pt-2">
+                                    <span className="text-white/60 text-[10px] sm:text-xs font-medium uppercase tracking-[0.2em]">
+                                        Powered By
+                                    </span>
+                                    <img
+                                        src="/logo/aicrntu-logo.png"
+                                        alt="AIC-RNTU Logo"
+                                        className="h-8 sm:h-10 md:h-12 object-contain brightness-0 invert opacity-80"
+                                    />
+                                </div>
                             </motion.div>
                         </div>
                     </div>

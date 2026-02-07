@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import { getAllTheEnsemble } from "../../../api/theensemble.api";
+import { getAllBizaiQuiz } from "../../../api/bizaiquiz.api";
 import { useAdminList } from "../../../hooks/useAdminList";
 import { exportToExcel } from "../../../utils/excelExport";
-import { Download, Search, ChevronLeft, ChevronRight } from "lucide-react";
+import { Download, Search, ChevronLeft, ChevronRight, Users } from "lucide-react";
 
-export default function TheEnsembleList() {
+export default function BizaiQuizList() {
     const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        getAllTheEnsemble().then((res) => {
+        getAllBizaiQuiz().then((res) => {
             setData(res.data.data);
         });
     }, []);
@@ -27,7 +27,7 @@ export default function TheEnsembleList() {
     return (
         <div className="p-6">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-                <h1 className="text-2xl font-bold">The Ensemble Submissions</h1>
+                <h1 className="text-2xl font-bold">Bizai Quiz Submissions</h1>
                 <div className="flex flex-col md:flex-row gap-3">
                     <div className="relative">
                         <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-4 h-4" />
@@ -40,7 +40,7 @@ export default function TheEnsembleList() {
                         />
                     </div>
                     <button
-                        onClick={() => exportToExcel(data, "TheEnsemble_Submissions")}
+                        onClick={() => exportToExcel(data, "BizaiQuiz_Submissions")}
                         className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition"
                     >
                         <Download className="w-4 h-4" />
@@ -54,15 +54,13 @@ export default function TheEnsembleList() {
                     <thead className="bg-gray-100 text-gray-700 uppercase">
                         <tr>
                             <th className="px-3 py-3 text-left">S.No</th>
-                            <th className="px-3 py-3 text-left">Designer Name</th>
+                            <th className="px-3 py-3 text-left">Captain Name</th>
                             <th className="px-3 py-3 text-left">Email</th>
                             <th className="px-3 py-3 text-left">Contact</th>
-                            <th className="px-3 py-3 text-left">College/Inst</th>
+                            <th className="px-3 py-3 text-left">College/Institute</th>
+                            <th className="px-3 py-3 text-left">Team Members</th>
                             <th className="px-3 py-3 text-left">City</th>
-                            <th className="px-3 py-3 text-left">Social Link</th>
-                            <th className="px-3 py-3 text-left">Discovery Path</th>
                             <th className="px-3 py-3 text-left">Date</th>
-                            <th className="px-3 py-3 text-left">Video</th>
                             <th className="px-3 py-3 text-left">Payment</th>
                         </tr>
                     </thead>
@@ -81,27 +79,22 @@ export default function TheEnsembleList() {
                                 <td className="px-3 py-3">{item.email}</td>
                                 <td className="px-3 py-3">{item.contact}</td>
                                 <td className="px-3 py-3">{item.collegeName}</td>
-                                <td className="px-3 py-3">{item.city}</td>
                                 <td className="px-3 py-3">
-                                    {item.socialLink ? (
-                                        <a href={item.socialLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Link</a>
-                                    ) : "N/A"}
+                                    {item.teamMembers && item.teamMembers.length > 0 ? (
+                                        <div className="space-y-1">
+                                            {item.teamMembers.map((m, i) => (
+                                                <div key={i} className="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded inline-block mr-1">
+                                                    {m.name}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    ) : (
+                                        <span className="text-gray-400">Solo</span>
+                                    )}
                                 </td>
-                                <td className="px-3 py-3">{item.whereDidYouHear}</td>
+                                <td className="px-3 py-3">{item.city}</td>
                                 <td className="px-3 py-3 text-gray-500">
                                     {item.createdAt ? new Date(item.createdAt).toLocaleDateString() : "N/A"}
-                                </td>
-                                <td className="px-3 py-3">
-                                    {item.video ? (
-                                        <a
-                                            href={`${BACKEND_URL}/api/${item.video}`}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-blue-600 hover:underline font-medium"
-                                        >
-                                            View
-                                        </a>
-                                    ) : "N/A"}
                                 </td>
                                 <td className="px-3 py-3">
                                     {item.paymentScreenshot ? (
@@ -121,7 +114,7 @@ export default function TheEnsembleList() {
                         ))}
                         {paginatedData.length === 0 && (
                             <tr>
-                                <td colSpan="11" className="px-4 py-6 text-center text-gray-500">No submissions found</td>
+                                <td colSpan="9" className="px-4 py-6 text-center text-gray-500">No submissions found</td>
                             </tr>
                         )}
                     </tbody>

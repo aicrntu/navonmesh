@@ -22,6 +22,7 @@ const CrewClashForm = () => {
         contact: "",
         collegeName: "",
         city: "",
+        numberOfTeamMember: "",
         socialLink: "",
         whereDidYouHear: "",
         video: null,
@@ -140,6 +141,17 @@ const CrewClashForm = () => {
                                 <input
                                     name="collegeName"
                                     placeholder="College / Organization"
+                                    required
+                                    onChange={handleChange}
+                                    className={inputClass}
+                                />
+                            </div>
+
+                            <div className="relative">
+                                <Users className={iconClass} />
+                                <input
+                                    name="numberOfTeamMember"
+                                    placeholder="Number of Team Members"
                                     required
                                     onChange={handleChange}
                                     className={inputClass}

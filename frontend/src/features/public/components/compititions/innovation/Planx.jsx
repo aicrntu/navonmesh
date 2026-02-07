@@ -51,13 +51,13 @@ const Planx = () => {
 
         // Timeline / Roadmap
         roadmap: [
-            { title: "Call for Application", date: "Kickstart your journey" },
-            { title: "Last Date to Apply", date: "Final call for entries" },
-            { title: "Shortlisted Announcement", date: "The top contenders" },
-            { title: "Pre-Finale Pitching", date: "Refining the pitch" },
-            { title: "Mentorship Sessions", date: "Learning from experts" },
-            { title: "Final Pitching", date: "The Grand Finale" },
+            { title: "Call for Application", date: "10th February" },
+            { title: "Last Date to Apply", date: "25th February" },
+            { title: "Shortlisted Announcement", date: "1st March" },
+            { title: "Pre-Finale Pitching", date: "6th - 8th March" },
+            { title: "Final Pitching", date: "15th March" },
         ],
+
     };
 
     return <CompetitionTemplate data={planxData} />;

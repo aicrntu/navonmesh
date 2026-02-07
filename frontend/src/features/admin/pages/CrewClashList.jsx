@@ -58,6 +58,7 @@ export default function CrewClashList() {
                             <th className="px-3 py-3 text-left">Email</th>
                             <th className="px-3 py-3 text-left">Contact</th>
                             <th className="px-3 py-3 text-left">College/Org</th>
+                            <th className="px-3 py-3 text-left">Members</th>
                             <th className="px-3 py-3 text-left">City</th>
                             <th className="px-3 py-3 text-left">Social Link</th>
                             <th className="px-3 py-3 text-left">Discovery Path</th>
@@ -81,6 +82,7 @@ export default function CrewClashList() {
                                 <td className="px-3 py-3">{item.email}</td>
                                 <td className="px-3 py-3">{item.contact}</td>
                                 <td className="px-3 py-3">{item.collegeName}</td>
+                                <td className="px-3 py-3 font-medium text-[#e91e63]">{item.numberOfTeamMember}</td>
                                 <td className="px-3 py-3">{item.city}</td>
                                 <td className="px-3 py-3">
                                     {item.socialLink ? (

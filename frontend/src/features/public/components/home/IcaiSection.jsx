@@ -87,7 +87,7 @@ const IcaiSection = () => {
                             className="absolute -bottom-6 -left-6 md:-left-12 hidden md:block"
                         >
                             <div className="bg-white/80 backdrop-blur-md border border-gray-100 px-6 py-4 rounded-2xl shadow-xl">
-                                <span className="text-gray-400 text-[10px] font-black uppercase tracking-tighter">SGSU Powered</span>
+                                {/* <span className="text-gray-400 text-[10px] font-black uppercase tracking-tighter">SGSU Powered</span> */}
                                 <div className="flex items-center gap-2 mt-1">
                                     <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                                     <span className="text-sm font-bold text-gray-900">Registration Open</span>

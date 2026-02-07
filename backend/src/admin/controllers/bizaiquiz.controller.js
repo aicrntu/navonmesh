@@ -1,18 +1,18 @@
-import { fetchAllTheEnsemble, fetchTheEnsembleById } from "../services/theensemble.service.js";
+import { fetchAllBizaiQuiz, fetchBizaiQuizById } from "../services/bizaiquiz.service.js";
 import ApiResponse from "../../utils/ApiResponse.js";
 
-export const getAllTheEnsemble = async (req, res, next) => {
+export const getAllBizaiQuiz = async (req, res, next) => {
     try {
-        const data = await fetchAllTheEnsemble();
+        const data = await fetchAllBizaiQuiz();
         res.status(200).json(new ApiResponse(true, "Data fetched successfully", data));
     } catch (error) {
         next(error);
     }
 };
 
-export const getTheEnsembleById = async (req, res, next) => {
+export const getBizaiQuizById = async (req, res, next) => {
     try {
-        const data = await fetchTheEnsembleById(req.params.id);
+        const data = await fetchBizaiQuizById(req.params.id);
         res.status(200).json(new ApiResponse(true, "Data fetched successfully", data));
     } catch (error) {
         next(error);

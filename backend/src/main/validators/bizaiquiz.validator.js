@@ -1,6 +1,6 @@
 import ApiError from "../../utils/ApiError.js";
 
-export const validateTheEnsemble = (req, res, next) => {
+export const validateBizaiQuiz = (req, res, next) => {
     if (!req.body) {
         throw new ApiError(400, "Request body is missing");
     }

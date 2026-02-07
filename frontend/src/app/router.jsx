@@ -23,7 +23,7 @@ import SoloSpotlightForm from "../features/public/components/forms/SoloSpotlight
 import CrewClashForm from "../features/public/components/forms/CrewClashForm";
 import TaleTellersForm from "../features/public/components/forms/TaleTellersForm";
 import MicDropForm from "../features/public/components/forms/MicDropForm";
-import TheEnsembleForm from "../features/public/components/forms/TheEnsembleForm";
+import BizaiQuizForm from "../features/public/components/forms/BizaiQuizForm";
 import ChefArenaForm from "../features/public/components/forms/ChefArenaForm";
 import ControllerClashForm from "../features/public/components/forms/ControllerClashForm";
 
@@ -42,7 +42,7 @@ import SoloSpotlightList from "../features/admin/pages/SoloSpotlightList";
 import CrewClashList from "../features/admin/pages/CrewClashList";
 import MicDropList from "../features/admin/pages/MicDropList";
 import TaleTellersList from "../features/admin/pages/TaleTellersList";
-import TheEnsembleList from "../features/admin/pages/TheEnsembleList";
+import BizaiQuizList from "../features/admin/pages/BizaiQuizList";
 import ControllerClashList from "../features/admin/pages/ControllerClashList";
 
 export default function AppRouter() {
@@ -69,7 +69,7 @@ export default function AppRouter() {
         <Route path="/crewclash-form" element={<CrewClashForm />} />
         <Route path="/taletellers-form" element={<TaleTellersForm />} />
         <Route path="/micdrop-form" element={<MicDropForm />} />
-        <Route path="/theensemble-form" element={<TheEnsembleForm />} />
+        <Route path="/bizaiquiz-form" element={<BizaiQuizForm />} />
         <Route path="/chefarena-form" element={<ChefArenaForm />} />
         <Route path="/controllerclash-form" element={<ControllerClashForm />} />
       </Route>
@@ -97,7 +97,7 @@ export default function AppRouter() {
         <Route path="crewclash" element={<CrewClashList />} />
         <Route path="micdrop" element={<MicDropList />} />
         <Route path="taletellers" element={<TaleTellersList />} />
-        <Route path="theensemble" element={<TheEnsembleList />} />
+        <Route path="bizaiquiz" element={<BizaiQuizList />} />
         <Route path="controllerclash" element={<ControllerClashList />} />
         <Route path="contact" element={<ContactList />} />
       </Route>
