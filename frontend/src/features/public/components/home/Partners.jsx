@@ -35,10 +35,6 @@ const PARTNERS = [
         logo: "/partners/Tally.jpg"
     },
     {
-        name: "Scope",
-        logo: "/partners/Scope.png"
-    },
-    {
         name: "MEPSC",
         logo: "/partners/MEPSC.png"
     },
