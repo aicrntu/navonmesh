@@ -5,6 +5,7 @@ import {
     ExternalLink,
     Star,
     ArrowRight,
+    BookOpen,
 } from "lucide-react";
 
 // ✅ Standalone Page: Controller Clash
@@ -173,6 +174,16 @@ const ControllerClash = () => {
                                     <p key={i}>{p}</p>
                                 ))}
                             </div>
+                            <a
+                                href="/compitition/rule-book/controller-clash-rule-book.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-xs hover:underline pt-2 group/link"
+                            >
+                                <BookOpen className="w-4 h-4" />
+                                Download Rule Book
+                                <ArrowRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform" />
+                            </a>
                         </motion.div>
                     </div>
                 </div>
