@@ -31,12 +31,12 @@ const Admad = () => {
 
     // Who Can Apply (I am putting it inside benefits because your template only has benefits)
     benefits: [
-    //   "UG / PG Students",
-    //   "Marketing Enthusiasts",
-    //   "Content Creators",        // who can apply
-    //   "Creative Artists",
+      //   "UG / PG Students",
+      //   "Marketing Enthusiasts",
+      //   "Content Creators",        // who can apply
+      //   "Creative Artists",
       "Cash Prizes Worth ₹60,000",
-      "Extensive Networking",              
+      "Extensive Networking",
       "Internship Opportunities",
       "Free Learning Sessions for Top 20",
     ],
@@ -51,12 +51,11 @@ const Admad = () => {
 
     // Event Timeline
     roadmap: [
-      { title: "Call for Application", date: "" },
-      { title: "Last Date to Apply", date: "" },
-      { title: "Assignment Given to Teams", date: "" },
-      { title: "Assignment Submission", date: "" },
-      { title: "Selected Teams Announcement", date: "" },
-      { title: "Final Rounds at Finale Event", date: "" },
+      { title: "Call for Application", date: "02/08/2026" },
+      { title: "Last Date to Apply", date: "05 March 2026" },
+      { title: "Assignment Given to Teams", date: "14 March 2026" },
+      { title: "Assignment Submission", date: "15 March 2026" },
+      { title: "Final Rounds at Finale Event", date: "15 March 2026" },
     ],
   };
 
