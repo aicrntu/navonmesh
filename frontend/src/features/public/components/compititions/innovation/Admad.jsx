@@ -45,13 +45,13 @@ const Admad = () => {
     screeningSteps: [
       "Creative Task Assigned",
       "Shortlisting – Top 20 Teams",
-      "Finale Day 1 – Creative Presentation",
+      "Brand Briefing for Ad Creation",
       "Finale Day 2 – Reel & Jury Evaluation",
     ],
 
     // Event Timeline
     roadmap: [
-      { title: "Call for Application", date: "02/08/2026" },
+      { title: "Call for Application", date: "08 February 2026" },
       { title: "Last Date to Apply", date: "05 March 2026" },
       { title: "Assignment Given to Teams", date: "14 March 2026" },
       { title: "Assignment Submission", date: "15 March 2026" },

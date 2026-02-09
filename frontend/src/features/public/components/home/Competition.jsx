@@ -28,8 +28,8 @@ const INNOVATION_LEAGUE = [
         path: "/innomaker"
     },
     {
-        title: "BinaryBattle",
-        subtitle: "24-Hour Software Hackathon",
+        title: "Binary Battle",
+        subtitle: "24 hour AI & Software Hackathon",
         icon: Code,
         path: "/binarybattle"
     },

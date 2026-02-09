@@ -119,10 +119,10 @@ const Footer = () => {
                         />
                         <div className="flex gap-4 pt-2">
                             {[
-                                { icon: Facebook, href: "https://www.facebook.com/aicrntuincubator/" },
-                                { icon: Twitter, href: "https://x.com/AicRntu" },
-                                { icon: Linkedin, href: "https://www.linkedin.com/company/aicrntu" },
-                                { icon: Instagram, href: "https://www.instagram.com/aic_rntu/" }
+                                { icon: Facebook, href: "https://www.facebook.com/sgsuniversity" },
+                                { icon: Twitter, href: "https://x.com/sgsuniversity?lang=en" },
+                                { icon: Linkedin, href: "https://www.linkedin.com/company/sgsuniversity/posts/?feedView=all" },
+                                { icon: Instagram, href: "https://www.instagram.com/sgsuniversity/" }
                             ].map((social, idx) => (
                                 <a
                                     key={idx}
@@ -185,7 +185,7 @@ const Footer = () => {
                                 <div>
                                     <p className="text-[10px] font-bold text-white/30 uppercase tracking-widest mb-1">Location</p>
                                     <p className="text-sm font-bold text-gray-200">SGSU Campus, NH-12, Narmadapuram Rd, near Misrod,
-Bhopal, Bhairopur, Madhya Pradesh 462047</p>
+                                        Bhopal, Bhairopur, Madhya Pradesh 462047</p>
                                 </div>
                             </li>
                         </ul>
