@@ -25,7 +25,10 @@ const Innomaker = () => {
     glimpses: [
       "/compitition/innomaker/Innomaker 1 (2).JPG",
       "/compitition/innomaker/Innomaker 2.JPG",
-      "/compitition/innomaker/Innomaker 3.JPG"
+      "/compitition/innomaker/Innomaker 3.JPG",
+      "/compitition/innomaker/DSC_0537.JPG",
+      "/compitition/innomaker/DSC_2734.JPG",
+      "/compitition/innomaker/DSC_3946.JPG"
     ],
 
     // Themes (put inside benefits because template supports only one list)
@@ -48,7 +51,7 @@ const Innomaker = () => {
     //   "Tech Enthusiasts",
 
       // Why Participate
-      "Cash Prizes Worth ₹100,000",
+      "Cash Prizes Worth ₹30,000",
       "Recognition & Visibility",
       "Ecosystem Networking",
       "Pre-Incubation at AIC-RNTU",

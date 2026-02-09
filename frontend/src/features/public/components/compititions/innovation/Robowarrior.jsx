@@ -61,7 +61,7 @@ const RoboWarriorsPage = () => {
 
         // Benefits
         benefits: [
-            "Winners Get Cash Prizes ₹35,000+",
+            "Winners Get Cash Prizes ₹65,000",
             "Lab Support for Top 5 Teams",
             "Certificates for All Participants",
             "Pure Thrill of Engineering Combat",

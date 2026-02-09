@@ -35,7 +35,7 @@ const Admad = () => {
       //   "Marketing Enthusiasts",
       //   "Content Creators",        // who can apply
       //   "Creative Artists",
-      "Cash Prizes Worth ₹60,000",
+      "Cash Prizes Worth ₹35,000",
       "Extensive Networking",
       "Internship Opportunities",
       "Free Learning Sessions for Top 20",

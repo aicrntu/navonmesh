@@ -63,7 +63,7 @@ const ControllerClash = () => {
 
         // Benefits
         benefits: [
-            "Cash Prizes Worth ₹100,000",
+            "Cash Prizes Worth ₹50,000",
             "Exposure to eSport Academie",
             "Recognition as a Top Player",
 
