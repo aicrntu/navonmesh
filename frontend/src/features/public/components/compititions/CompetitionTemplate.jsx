@@ -68,7 +68,15 @@ const CompetitionTemplate = ({ data }) => {
                     transition={{ duration: 0.8 }}
                     className="relative z-10 max-w-4xl"
                 >
-                    <img src={data.logo} alt="Logo" className="h-24 md:h-32 mb-8 mx-auto filter drop-shadow-2xl" />
+                    {data.secondaryLogo ? (
+                        <div className="flex justify-center items-center gap-8 mb-8">
+                            <img src={data.logo} alt="Logo" className="h-24 md:h-32 filter drop-shadow-2xl" />
+                            <div className="h-16 w-px bg-gray-400/50"></div>
+                            <img src={data.secondaryLogo} alt="Secondary Logo" className="h-20 md:h-28 filter drop-shadow-2xl" />
+                        </div>
+                    ) : (
+                        <img src={data.logo} alt="Logo" className="h-24 md:h-32 mb-8 mx-auto filter drop-shadow-2xl" />
+                    )}
                     <h1 className="text-xl md:text-xl font-black text-gray-900 leading-tight tracking-tighter mb-8 uppercase">
                         {data.heroTitlePart1} <span className="text-primary italic">{data.heroTitlePart2}</span>
                     </h1>

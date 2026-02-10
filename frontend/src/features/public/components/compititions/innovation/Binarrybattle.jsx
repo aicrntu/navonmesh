@@ -92,11 +92,19 @@ const BinaryBattle = () => {
           transition={{ duration: 0.8 }}
           className="relative z-10 max-w-4xl"
         >
-          <img
-            src={battleData.logo}
-            alt="Logo"
-            className="h-24 md:h-32 mb-8 mx-auto filter drop-shadow-2xl"
-          />
+          <div className="flex justify-center items-center gap-8 mb-8">
+            <img
+              src={battleData.logo}
+              alt="Logo"
+              className="h-24 md:h-32 filter drop-shadow-2xl"
+            />
+            <div className="h-16 w-px bg-gray-400/50"></div>
+            <img
+              src="/logo/Indore Software Association - Logo.png"
+              alt="Indore Software Association Logo"
+              className="h-20 md:h-28 filter drop-shadow-2xl"
+            />
+          </div>
 
           <h1 className="text-xl md:text-xl font-black text-gray-900 leading-tight tracking-tighter mb-8 uppercase">
             {battleData.heroTitlePart1}{" "}
@@ -316,16 +324,14 @@ const BinaryBattle = () => {
                 initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className={`flex flex-col md:flex-row items-center gap-8 ${
-                  i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
+                className={`flex flex-col md:flex-row items-center gap-8 ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  }`}
               >
                 <div
-                  className={`flex-1 w-full p-8 bg-gray-50 border border-gray-100 rounded-2xl ${
-                    i % 2 === 0
+                  className={`flex-1 w-full p-8 bg-gray-50 border border-gray-100 rounded-2xl ${i % 2 === 0
                       ? "text-left md:text-right"
                       : "text-left"
-                  }`}
+                    }`}
                 >
                   <h4 className="font-black text-lg text-gray-900 uppercase">
                     {item.title}

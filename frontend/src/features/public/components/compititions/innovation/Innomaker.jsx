@@ -7,6 +7,7 @@ const Innomaker = () => {
 
     // Navbar + Hero
     logo: "/compitition/innomaker/inno_maker_white_logo.png",
+    secondaryLogo: "/logo/Indore Software Association - Logo.png",
     heroImage: "/compitition/innomaker/innomaker_background.jpg",
     heroTitlePart1: "Prototyping the Future",
     heroTitlePart2: "of Innovation",
@@ -34,21 +35,21 @@ const Innomaker = () => {
     // Themes (put inside benefits because template supports only one list)
     benefits: [
       // Themes
-    //   "Smart Resource Conservation",
-    //   "Smart Education",
-    //   "Disaster Management",
-    //   "Blockchain & Cybersecurity",
-    //   "Renewable Energy",
-    //   "Robotics & Drones",
-    //   "Agriculture & FoodTech",
-    //   "Healthcare & MedTech",
-    //   "Smart Automation",
-    //   "Miscellaneous",
+      //   "Smart Resource Conservation",
+      //   "Smart Education",
+      //   "Disaster Management",
+      //   "Blockchain & Cybersecurity",
+      //   "Renewable Energy",
+      //   "Robotics & Drones",
+      //   "Agriculture & FoodTech",
+      //   "Healthcare & MedTech",
+      //   "Smart Automation",
+      //   "Miscellaneous",
 
-    //   // Who can apply
-    //   "2–4 Members per Team",
-    //   "UG / PG Students",
-    //   "Tech Enthusiasts",
+      //   // Who can apply
+      //   "2–4 Members per Team",
+      //   "UG / PG Students",
+      //   "Tech Enthusiasts",
 
       // Why Participate
       "Cash Prizes Worth ₹30,000",

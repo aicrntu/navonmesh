@@ -49,10 +49,7 @@ const binarybattleSchema = new mongoose.Schema(
     presentation: {
       type: String,
     },
-    paymentScreenshot: {
-      type: String,
-      required: true,
-    },
+    // paymentScreenshot removed
     project: {
       type: String,
       required: true,
