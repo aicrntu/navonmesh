@@ -221,11 +221,11 @@ const SoloSpotlightForm = () => {
                                     required
                                     onChange={handleChange}
                                     className="block w-full text-sm text-gray-500
-                    file:mr-4 file:py-2 file:px-4
-                    file:rounded-full file:border-0
-                    file:text-sm file:font-semibold
-                    file:bg-[#008fad] file:text-white
-                    hover:opacity-90 cursor-pointer"
+                                               file:mr-4 file:py-2 file:px-4
+                                               file:rounded-full file:border-0
+                                               file:text-sm file:font-semibold
+                                               file:bg-[#008fad] file:text-white
+                                               hover:opacity-90 cursor-pointer"
                                 />
                             </div>
                         </div>
