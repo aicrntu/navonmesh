@@ -3,6 +3,10 @@ import ApiResponse from "../../utils/ApiResponse.js";
 
 export const submitInnomaker = async (req, res, next) => {
   try {
+    if (req.body.participants) {
+      req.body.participants = JSON.parse(req.body.participants);
+    }
+
     const data = await handleInnomakerForm({
       ...req.body,
       project: req.files?.project ? req.files.project[0].path : null,

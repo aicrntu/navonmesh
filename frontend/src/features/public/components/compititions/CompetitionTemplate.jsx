@@ -96,7 +96,9 @@ const CompetitionTemplate = ({ data }) => {
                         >
                             Secure Your Spot <ExternalLink className="w-4 h-4 group-hover:rotate-45 transition-transform" />
                         </a>
-                    )}
+                    )
+
+                    }
                 </motion.div>
             </section>
 

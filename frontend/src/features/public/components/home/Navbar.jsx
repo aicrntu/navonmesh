@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -22,6 +22,8 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
 
+    const navigate = useNavigate();
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
@@ -39,9 +41,34 @@ const Navbar = () => {
         }
     }, [isOpen]);
 
+    // Handle initial scroll if navigating with hash
+    useEffect(() => {
+        if (location.pathname === '/' && location.hash) {
+            const element = document.getElementById(location.hash.substring(1));
+            if (element) {
+                setTimeout(() => {
+                    const headerOffset = 60;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }, 100); // Small delay to ensure render
+            }
+        }
+    }, [location]);
+
     const handleNavClick = (e, path) => {
+        e.preventDefault();
+        setIsOpen(false);
+
+        if (location.pathname !== '/') {
+            navigate('/' + path);
+            return;
+        }
+
         if (path.startsWith('#')) {
-            e.preventDefault();
             const element = document.getElementById(path.substring(1));
             if (element) {
                 const headerOffset = 60;
@@ -53,7 +80,6 @@ const Navbar = () => {
                     behavior: "smooth"
                 });
             }
-            setIsOpen(false);
         }
     };
 

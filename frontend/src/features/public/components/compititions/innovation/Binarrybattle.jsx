@@ -98,17 +98,12 @@ const BinaryBattle = () => {
               alt="Logo"
               className="h-24 md:h-32 filter drop-shadow-2xl"
             />
-            <div className="h-16 w-px bg-gray-400/50"></div>
-            <img
-              src="/logo/Indore Software Association - Logo.png"
-              alt="Indore Software Association Logo"
-              className="h-20 md:h-28 filter drop-shadow-2xl"
-            />
+
           </div>
 
           <h1 className="text-xl md:text-xl font-black text-gray-900 leading-tight tracking-tighter mb-8 uppercase">
             {battleData.heroTitlePart1}{" "}
-            <span className="text-primary italic">
+            <span className="text-white italic">
               {battleData.heroTitlePart2}
             </span>
           </h1>
@@ -133,6 +128,12 @@ const BinaryBattle = () => {
             </a>
           )}
         </motion.div>
+        <h1 className="text-xl md:text-xl font-black text-white-900 leading-tight tracking-tighter mt-8 uppercase">Knowledge Partner</h1>
+        <img
+          src="/logo/Indore Software Association - Logo.png"
+          alt="Indore Software Association Logo"
+          className="h-20 md:h-28 filter drop-shadow-2xl"
+        />
       </section>
 
       {/* ABOUT */}
@@ -329,8 +330,8 @@ const BinaryBattle = () => {
               >
                 <div
                   className={`flex-1 w-full p-8 bg-gray-50 border border-gray-100 rounded-2xl ${i % 2 === 0
-                      ? "text-left md:text-right"
-                      : "text-left"
+                    ? "text-left md:text-right"
+                    : "text-left"
                     }`}
                 >
                   <h4 className="font-black text-lg text-gray-900 uppercase">

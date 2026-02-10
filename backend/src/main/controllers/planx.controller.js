@@ -3,6 +3,10 @@ import ApiResponse from "../../utils/ApiResponse.js";
 
 export const submitPlanxForm = async (req, res, next) => {
   try {
+    if (req.body.participants) {
+      req.body.participants = JSON.parse(req.body.participants);
+    }
+
     const data = await handlePlanxForm({
       ...req.body,
       presentation: req.files?.presentation ? req.files.presentation[0].path : null,

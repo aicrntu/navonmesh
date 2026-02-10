@@ -55,6 +55,7 @@ export default function PlanxList() {
               <th className="px-3 py-3 text-left">Name</th>
               <th className="px-3 py-3 text-left">Email</th>
               <th className="px-3 py-3 text-left">Phone</th>
+              <th className="px-3 py-3 text-left">Participants</th>
               <th className="px-3 py-3 text-left">State</th>
               <th className="px-3 py-3 text-left">Pincode</th>
               <th className="px-3 py-3 text-left">Role</th>
@@ -84,6 +85,20 @@ export default function PlanxList() {
                 <td className="px-3 py-3 font-medium">{item.name}</td>
                 <td className="px-3 py-3">{item.email}</td>
                 <td className="px-3 py-3">{item.number}</td>
+                <td className="px-3 py-3">
+                  {item.participants?.length > 0 ? (
+                    <div className="space-y-1">
+                      {item.participants.map((p, i) => (
+                        <div key={i} className="text-sm">
+                          <span className="font-medium">{p.name}</span>
+                          <span className="text-xs text-gray-500 block">{p.phone}</span>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    "N/A"
+                  )}
+                </td>
                 <td className="px-3 py-3">{item.state}</td>
                 <td className="px-3 py-3">{item.pincode}</td>
                 <td className="px-3 py-3">{item.whoAreYou}</td>

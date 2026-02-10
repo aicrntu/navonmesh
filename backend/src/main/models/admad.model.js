@@ -40,6 +40,7 @@ const admadSchema = mongoose.Schema(
     },
     paymentScreenshot: {
       type: String,
+      required: true,
     },
   },
   {

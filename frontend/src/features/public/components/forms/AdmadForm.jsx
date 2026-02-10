@@ -23,7 +23,7 @@ const AdMadForm = () => {
     collegeName: "",
     numberOfTeamMember: "",
     video: null,
-    // paymentScreenshot: null,
+    paymentScreenshot: null,
   };
 
   const [formData, setFormData] = useState(initialState);
@@ -201,7 +201,7 @@ const AdMadForm = () => {
               <h3 className="text-lg font-bold text-gray-800">
                 Pitch Video
               </h3>
-              
+
               <p>Create an AD on Navonmesh( Max 1 min)</p>
             </div>
 
@@ -230,7 +230,8 @@ const AdMadForm = () => {
           </section>
 
           {/* PAYMENT DETAILS */}
-          {/* <section>
+          {/* PAYMENT DETAILS */}
+          <section>
             <div className="flex items-center gap-2 mb-6 border-b border-gray-100 pb-2">
               <CreditCard className="w-5 h-5 text-[#008fad]" />
               <h3 className="text-lg font-bold text-gray-800">Payment Details</h3>
@@ -261,7 +262,7 @@ const AdMadForm = () => {
                 </div>
               </div>
             </div>
-          </section> */}
+          </section>
 
           {/* SUBMIT */}
           <button

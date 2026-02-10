@@ -7,7 +7,7 @@ const Innomaker = () => {
 
     // Navbar + Hero
     logo: "/compitition/innomaker/inno_maker_white_logo.png",
-    secondaryLogo: "/logo/Indore Software Association - Logo.png",
+    secondaryLogo: "",
     heroImage: "/compitition/innomaker/innomaker_background.jpg",
     heroTitlePart1: "Prototyping the Future",
     heroTitlePart2: "of Innovation",

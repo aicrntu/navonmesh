@@ -49,7 +49,30 @@ const binarybattleSchema = new mongoose.Schema(
     presentation: {
       type: String,
     },
-    // paymentScreenshot removed
+    paymentScreenshot: {
+      type: String,
+      required: true,
+    },
+    participants: {
+      type: [
+        {
+          name: {
+            type: String,
+            required: true,
+          },
+          phone: {
+            type: String,
+            required: true,
+          },
+        },
+      ],
+      validate: {
+        validator: function (v) {
+          return v && v.length >= 2 && v.length <= 4;
+        },
+        message: "A team must have between 2 and 4 participants.",
+      },
+    },
     project: {
       type: String,
       required: true,

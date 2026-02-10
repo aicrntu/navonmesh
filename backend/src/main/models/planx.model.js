@@ -56,6 +56,26 @@ const planXSchema = new mongoose.Schema(
     paymentScreenshot: {
       type: String,
     },
+    participants: {
+      type: [
+        {
+          name: {
+            type: String,
+            required: true,
+          },
+          phone: {
+            type: String,
+            required: true,
+          },
+        },
+      ],
+      validate: {
+        validator: function (v) {
+          return v && v.length >= 2 && v.length <= 4;
+        },
+        message: "A team must have between 2 and 4 participants.",
+      },
+    },
   },
   {
     timestamps: true,

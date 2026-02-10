@@ -32,6 +32,7 @@ const InnomakerForm = () => {
         projectDescription: "",
         project: null,
         paymentScreenshot: null,
+        participants: [{ name: "", phone: "" }, { name: "", phone: "" }],
     };
 
     const [formData, setFormData] = useState(initialState);
@@ -45,15 +46,43 @@ const InnomakerForm = () => {
         }));
     };
 
+
+
+    const handleParticipantChange = (index, field, value) => {
+        const updatedParticipants = [...formData.participants];
+        updatedParticipants[index][field] = value;
+        setFormData({ ...formData, participants: updatedParticipants });
+    };
+
+    const addParticipant = () => {
+        if (formData.participants.length < 4) {
+            setFormData({
+                ...formData,
+                participants: [...formData.participants, { name: "", phone: "" }],
+            });
+        }
+    };
+
+    const removeParticipant = (index) => {
+        if (formData.participants.length > 2) {
+            const updatedParticipants = formData.participants.filter((_, i) => i !== index);
+            setFormData({ ...formData, participants: updatedParticipants });
+        }
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
 
         try {
             const payload = new FormData();
-            Object.entries(formData).forEach(([key, value]) =>
-                payload.append(key, value)
-            );
+            Object.entries(formData).forEach(([key, value]) => {
+                if (key === 'participants') {
+                    payload.append(key, JSON.stringify(value));
+                } else {
+                    payload.append(key, value);
+                }
+            });
 
             await innomakerForm(payload);
             alert("Innomaker registration successful 🎉");
@@ -174,6 +203,56 @@ const InnomakerForm = () => {
                         </div>
                     </section>
 
+                    {/* TEAM DETAILS */}
+                    <section>
+                        <div className="flex items-center gap-2 mb-6 border-b pb-2">
+                            <Users className="w-5 h-5 text-[#008fad]" />
+                            <h3 className="text-lg font-bold text-gray-800">
+                                Team Details
+                            </h3>
+                        </div>
+
+                        <div className="space-y-4">
+                            <h4 className="font-semibold text-gray-700">Participating Members (Min 2, Max 4)</h4>
+                            {formData.participants.map((participant, index) => (
+                                <div key={index} className="flex gap-4 items-center">
+                                    <input
+                                        placeholder={`Member ${index + 1} Name`}
+                                        value={participant.name}
+                                        onChange={(e) => handleParticipantChange(index, "name", e.target.value)}
+                                        required
+                                        className={inputClass}
+                                    />
+                                    <input
+                                        placeholder={`Member ${index + 1} Mobile`}
+                                        value={participant.phone}
+                                        onChange={(e) => handleParticipantChange(index, "phone", e.target.value)}
+                                        required
+                                        className={inputClass}
+                                    />
+                                    {formData.participants.length > 2 && (
+                                        <button
+                                            type="button"
+                                            onClick={() => removeParticipant(index)}
+                                            className="text-red-500 font-bold hover:text-red-700"
+                                        >
+                                            X
+                                        </button>
+                                    )}
+                                </div>
+                            ))}
+                            {formData.participants.length < 4 && (
+                                <button
+                                    type="button"
+                                    onClick={addParticipant}
+                                    className="text-[#008fad] font-bold hover:underline"
+                                >
+                                    + Add Participant
+                                </button>
+                            )}
+                        </div>
+                    </section>
+
                     {/* ACADEMIC DETAILS */}
                     <section>
                         <div className="flex items-center gap-2 mb-6 border-b pb-2">
@@ -258,10 +337,12 @@ const InnomakerForm = () => {
                                     <input
                                         name="githubLink"
                                         placeholder="GitHub Repository Link"
-                                        required
                                         onChange={handleChange}
                                         className={inputClass}
                                     />
+                                    <p className="text-xs text-gray-500 mt-1 ml-1">
+                                        * Provide if solution is SAAS/App based
+                                    </p>
                                 </div>
 
                                 <div className="relative">
@@ -269,7 +350,6 @@ const InnomakerForm = () => {
                                     <input
                                         name="technologies"
                                         placeholder="Technologies Used"
-                                        required
                                         onChange={handleChange}
                                         className={inputClass}
                                     />
