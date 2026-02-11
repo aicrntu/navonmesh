@@ -1,7 +1,7 @@
 import ApiError from "../utils/ApiError.js";
 
 const errorHandler = (err, req, res, next) => {
-  console.error("HERE IS ERROR:", err);
+  console.error("❌ HERE IS ERROR ==> ", err);
 
   const statusCode = err.statusCode || 500;
   const message =

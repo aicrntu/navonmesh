@@ -7,7 +7,7 @@ const PlanxForm = () => {
   const initialState = {
     name: "", email: "", number: "", state: "", pincode: "",
     whoAreYou: "", organizationName: "", startupIdeaName: "", teamMemberaName: "",
-    emailOfTeam: "", teamDetail: "", aboutStartup: "", presentation: null, //paymentScreenshot: null,
+    emailOfTeam: "", teamDetail: "", aboutStartup: "", presentation: null, paymentScreenshot: null,
     participants: [{ name: "", phone: "" }, { name: "", phone: "" }],
   };
 
@@ -215,7 +215,7 @@ const PlanxForm = () => {
             </div>
           </section>
 
-          {/* <section>
+          <section>
             <div className="flex items-center gap-2 mb-6 border-b border-gray-100 pb-2">
               <CreditCard className="w-5 h-5 text-[#008fad]" />
               <h3 className="text-lg font-bold text-gray-800">Payment Details</h3>
@@ -223,7 +223,7 @@ const PlanxForm = () => {
             <div className="space-y-6">
               <div className="bg-teal-50 p-6 rounded-2xl border border-teal-100 flex flex-col md:flex-row items-center gap-6">
                 <div className="flex-1">
-                  <h4 className="text-xl font-bold text-gray-800 mb-2">Registration Fee: 200/- Per Team</h4>
+                  <h4 className="text-xl font-bold text-gray-800 mb-2">Registration Fee: ₹ 500.00</h4>
                   <p className="text-gray-600 text-sm mb-4">Scan the QR code to pay the registration fee and upload the screenshot below for verification.</p>
                 </div>
                 <div className="w-40 h-40 bg-white p-2 rounded-xl shadow-sm border border-gray-100">
@@ -246,7 +246,7 @@ const PlanxForm = () => {
                 </div>
               </div>
             </div>
-          </section> */}
+          </section>
 
           <button
             type="submit"
