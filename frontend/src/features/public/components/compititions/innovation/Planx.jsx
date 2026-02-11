@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ExternalLink, Star, ArrowRight, BookOpen } from "lucide-react";
+import { ExternalLink, Star, ArrowRight, BookOpen, CheckCircle } from "lucide-react";
 
 const Planx = () => {
     useEffect(() => {
@@ -224,6 +224,37 @@ const Planx = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Eligibility Section */}
+            {/* <section id="eligibility" className="py-24 bg-blue-50/50">
+                <div className="max-w-7xl mx-auto px-8 lg:px-20">
+                    <h2 className="text-4xl font-black text-gray-900 tracking-tighter uppercase mb-16 text-center">
+                        Who Can <span className="text-primary italic">Apply</span>?
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {[
+                            "UG / PG Students",
+                            "Aspiring Entrepreneurs",
+                            "Startups",
+                            "Innovators"
+                        ].map((item, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 }}
+                                className="flex items-center gap-4 p-6 bg-white rounded-2xl shadow-sm border border-gray-100"
+                            >
+                                <div className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style={{ backgroundColor: 'rgb(0, 136, 204)' }}>
+                                    <CheckCircle className="w-5 h-5 text-white" />
+                                </div>
+                                <span className="font-bold text-gray-800">{item}</span>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section> */}
 
             {/* SCREENING PROCESS */}
             <section className="py-24 bg-gray-950 text-white relative overflow-hidden">

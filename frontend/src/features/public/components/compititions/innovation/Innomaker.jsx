@@ -60,6 +60,12 @@ const Innomaker = () => {
       "Fab-Lab Prototype Support",
     ],
 
+    eligibility: [
+      "2–4 Members per Team",
+      "UG / PG Students",
+      "Tech Enthusiasts",
+    ],
+
     // Screening Steps
     screeningSteps: [
       "Registration with Presentation",

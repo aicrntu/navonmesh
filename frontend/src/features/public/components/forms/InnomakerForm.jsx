@@ -12,6 +12,8 @@ import {
     FileText,
     CreditCard,
     Camera,
+    Download,
+    Users,
 } from "lucide-react";
 import { innomakerForm } from "../../../../api/innomaker.api";
 
@@ -368,9 +370,19 @@ const InnomakerForm = () => {
                         </div>
 
                         <div className="bg-gray-50 p-6 rounded-2xl border-2 border-dashed hover:border-[#008fad] transition">
-                            <label className={labelClass}>
-                                Upload Project File (ZIP/PDF/DOC) *
-                            </label>
+                            <div className="flex justify-between items-center mb-2">
+                                <label className={labelClass.replace("mb-2", "mb-0")}>
+                                    Upload Project File (ZIP/PDF/DOC) *
+                                </label>
+                                <a
+                                    href="/compitition/sample-file/innomaker-sample-file.pdf"
+                                    download="Innomaker_Sample_File.pdf"
+                                    className="flex items-center gap-1 text-sm text-[#008fad] hover:underline font-medium transition-all"
+                                >
+                                    <Download className="w-4 h-4" />
+                                    Download Sample File
+                                </a>
+                            </div>
 
                             <div className="flex items-center gap-4">
                                 <FileText className="w-8 h-8 text-[#008fad] opacity-60" />

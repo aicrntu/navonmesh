@@ -61,7 +61,7 @@ export default function BizaiQuizList() {
                             <th className="px-3 py-3 text-left">Team Members</th>
                             <th className="px-3 py-3 text-left">City</th>
                             <th className="px-3 py-3 text-left">Date</th>
-                            <th className="px-3 py-3 text-left">Payment</th>
+                            {/* <th className="px-3 py-3 text-left">Payment</th> */}
                         </tr>
                     </thead>
 
@@ -96,7 +96,7 @@ export default function BizaiQuizList() {
                                 <td className="px-3 py-3 text-gray-500">
                                     {item.createdAt ? new Date(item.createdAt).toLocaleDateString() : "N/A"}
                                 </td>
-                                <td className="px-3 py-3">
+                                {/* <td className="px-3 py-3">
                                     {item.paymentScreenshot ? (
                                         <a
                                             href={`${BACKEND_URL}/api/${item.paymentScreenshot}`}
@@ -109,7 +109,7 @@ export default function BizaiQuizList() {
                                     ) : (
                                         <span className="text-gray-400">N/A</span>
                                     )}
-                                </td>
+                                </td> */}
                             </tr>
                         ))}
                         {paginatedData.length === 0 && (

@@ -41,6 +41,13 @@ const Admad = () => {
       "Free Learning Sessions for Top 20",
     ],
 
+    eligibility: [
+      "UG / PG Students",
+      "Marketing Enthusiasts",
+      "Content Creators",
+      "Creative Artists",
+    ],
+
     // Screening Procedure
     screeningSteps: [
       "Creative Task Assigned",

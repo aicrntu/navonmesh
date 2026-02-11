@@ -23,7 +23,7 @@ const BizaiQuizForm = () => {
         collegeName: "",
         city: "",
         whereDidYouHear: "",
-        paymentScreenshot: null,
+        // paymentScreenshot: null,
         teamMembers: [], // Array of { name, email, contact }
     };
 
@@ -294,7 +294,7 @@ const BizaiQuizForm = () => {
                     </section>
 
                     {/* PAYMENT DETAILS */}
-                    < section >
+                    {/* < section >
                         <div className="flex items-center gap-2 mb-6 border-b border-gray-100 pb-2">
                             <CreditCard className="w-5 h-5 text-[#3f51b5]" />
                             <h3 className="text-lg font-bold text-gray-800">Payment Details</h3>
@@ -325,7 +325,7 @@ const BizaiQuizForm = () => {
                                 </div>
                             </div>
                         </div>
-                    </section >
+                    </section > */}
 
                     {/* SUBMIT */}
                     < button

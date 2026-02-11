@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { User, Mail, Phone, MapPin, Building, Users, FileText, Upload, CreditCard, Camera } from "lucide-react";
+import { User, Mail, Phone, MapPin, Building, Users, FileText, Upload, CreditCard, Camera, Download } from "lucide-react";
 import { planxForm } from "../../../../api/planx.api.js";
 
 const PlanxForm = () => {
@@ -189,7 +189,17 @@ const PlanxForm = () => {
               <textarea name="aboutStartup" value={formData.aboutStartup} placeholder="Describe your startup idea in detail..." onChange={handleChange} required rows={4} className={inputClass.replace('pl-10', 'pl-4') + " resize-none"} />
 
               <div className="bg-gray-50 p-6 rounded-2xl border-2 border-dashed border-gray-200 hover:border-[#008fad] transition-colors">
-                <label className={labelClass}>Upload Presentation (PDF/PPT) *</label>
+                <div className="flex justify-between items-center mb-1.5">
+                  <label className={labelClass.replace("mb-1.5", "mb-0")}>Upload Presentation (PDF/PPT) *</label>
+                  <a
+                    href="/compitition/sample-file/planx-sample-file.pdf"
+                    download="PlanX_Sample_File.pdf"
+                    className="flex items-center gap-1 text-sm text-[#008fad] hover:underline font-medium transition-all"
+                  >
+                    <Download className="w-4 h-4" />
+                    Download Sample File
+                  </a>
+                </div>
                 <div className="flex items-center gap-4">
                   <Upload className="text-[#008fad] w-8 h-8 opacity-60" />
                   <input

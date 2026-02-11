@@ -16,7 +16,7 @@ export const submitBizaiQuiz = async (req, res, next) => {
         const data = await handleBizaiQuiz({
             ...req.body,
             teamMembers,
-            paymentScreenshot: req.files?.paymentScreenshot ? req.files.paymentScreenshot[0].path : null,
+            // paymentScreenshot: req.files?.paymentScreenshot ? req.files.paymentScreenshot[0].path : null,
         });
 
         res

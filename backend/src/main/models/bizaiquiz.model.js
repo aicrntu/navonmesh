@@ -24,10 +24,10 @@ const bizaiQuizSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        paymentScreenshot: {
-            type: String,
-            required: true,
-        },
+        // paymentScreenshot: {
+        //     type: String,
+        //     required: true,
+        // },
         city: {
             type: String,
             required: true,

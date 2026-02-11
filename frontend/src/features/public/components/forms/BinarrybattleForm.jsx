@@ -29,7 +29,7 @@ const BinarryBattleForm = () => {
         githubLink: "",
         technologies: "",
         project: null,
-        project: null,
+
         paymentScreenshot: null,
         participants: [{ name: "", phone: "" }, { name: "", phone: "" }],
     };

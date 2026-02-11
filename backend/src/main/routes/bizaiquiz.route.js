@@ -6,6 +6,6 @@ import upload from "../../middlewares/upload.middleware.js";
 
 const router = express.Router();
 
-router.post("/bizaiquiz", upload.fields([{ name: 'paymentScreenshot', maxCount: 1 }]), validateBizaiQuiz, submitBizaiQuiz);
+router.post("/bizaiquiz", upload.none(), validateBizaiQuiz, submitBizaiQuiz);
 
 export default router;
