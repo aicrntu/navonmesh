@@ -389,7 +389,7 @@ const InnomakerForm = () => {
                                 <input
                                     type="file"
                                     name="project"
-                                    accept=".zip,.rar,.pdf,.doc,.docx"
+                                    accept=".zip,.rar,.pdf,.doc,.docx,.pptx,.ppt"
                                     required
                                     onChange={handleChange}
                                     className="block w-full text-sm text-gray-500

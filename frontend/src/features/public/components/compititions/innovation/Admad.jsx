@@ -42,10 +42,9 @@ const Admad = () => {
     ],
 
     eligibility: [
-      "UG / PG Students",
-      "Marketing Enthusiasts",
-      "Content Creators",
-      "Creative Artists",
+      "Management/Commerce/Communication School UG/PG Students",
+      "Team Must Comprise of 2-4 Students",
+      "Freelance Graphic Designer/ Videographer upto age 25yrs",
     ],
 
     // Screening Procedure

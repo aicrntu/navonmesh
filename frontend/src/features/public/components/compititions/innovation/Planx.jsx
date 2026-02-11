@@ -226,17 +226,16 @@ const Planx = () => {
             </section>
 
             {/* Eligibility Section */}
-            {/* <section id="eligibility" className="py-24 bg-blue-50/50">
+            <section id="eligibility" className="py-24 bg-blue-50/50">
                 <div className="max-w-7xl mx-auto px-8 lg:px-20">
                     <h2 className="text-4xl font-black text-gray-900 tracking-tighter uppercase mb-16 text-center">
                         Who Can <span className="text-primary italic">Apply</span>?
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
-                            "UG / PG Students",
-                            "Aspiring Entrepreneurs",
-                            "Startups",
-                            "Innovators"
+                            "Any Stream Students",
+                            "UG/PG/Diploma Students",
+                            "Team Must Comprise of 2-4 Students"
                         ].map((item, i) => (
                             <motion.div
                                 key={i}
@@ -254,7 +253,7 @@ const Planx = () => {
                         ))}
                     </div>
                 </div>
-            </section> */}
+            </section>
 
             {/* SCREENING PROCESS */}
             <section className="py-24 bg-gray-950 text-white relative overflow-hidden">

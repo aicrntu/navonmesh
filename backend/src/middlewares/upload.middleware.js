@@ -24,6 +24,16 @@ const fileFilter = (req, file, cb) => {
     "image/png",
     "application/pdf",
 
+    // docs & archives
+    "application/zip",
+    "application/x-zip-compressed",
+    "application/x-rar-compressed",
+    "application/vnd.rar",
+    "application/msword",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "application/vnd.ms-powerpoint",
+    "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+
     // video types
     "video/mp4",
     "video/mpeg",

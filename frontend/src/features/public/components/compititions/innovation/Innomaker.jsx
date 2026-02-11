@@ -61,9 +61,9 @@ const Innomaker = () => {
     ],
 
     eligibility: [
-      "2–4 Members per Team",
-      "UG / PG Students",
-      "Tech Enthusiasts",
+      "Any Stream UG/PG Students",
+      "Cross Stream Teams are Eligible",
+      "Team Must Comprise of 2-4 Students",
     ],
 
     // Screening Steps
