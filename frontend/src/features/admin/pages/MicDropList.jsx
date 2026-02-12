@@ -59,6 +59,7 @@ export default function MicDropList() {
                             <th className="px-3 py-3 text-left">Contact</th>
                             <th className="px-3 py-3 text-left">College Name</th>
                             <th className="px-3 py-3 text-left">City</th>
+                            <th className="px-3 py-3 text-left">Participation Type</th>
                             <th className="px-3 py-3 text-left">Social Link</th>
                             <th className="px-3 py-3 text-left">Discovery Path</th>
                             <th className="px-3 py-3 text-left">Date</th>
@@ -82,6 +83,7 @@ export default function MicDropList() {
                                 <td className="px-3 py-3">{item.contact}</td>
                                 <td className="px-3 py-3">{item.collegeName}</td>
                                 <td className="px-3 py-3">{item.city}</td>
+                                <td className="px-3 py-3">{item.participationType || "N/A"}</td>
                                 <td className="px-3 py-3">
                                     {item.socialLink ? (
                                         <a href={item.socialLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Link</a>

@@ -26,6 +26,10 @@ const micDropSchema = mongoose.Schema(
             type: String,
             required: true,
         },
+        participationType: {
+            type: String,
+            required: true,
+        },
         socialLink: {
             type: String,
             required: true,

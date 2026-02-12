@@ -26,6 +26,7 @@ const MicDropForm = () => {
         whereDidYouHear: "",
         video: null,
         paymentScreenshot: null,
+        participationType: "",
     };
 
     const [formData, setFormData] = useState(initialState);
@@ -155,6 +156,21 @@ const MicDropForm = () => {
                                     onChange={handleChange}
                                     className={inputClass}
                                 />
+                            </div>
+
+                            <div className="relative">
+                                <User className={iconClass} />
+                                <select
+                                    name="participationType"
+                                    value={formData.participationType}
+                                    onChange={handleChange}
+                                    required
+                                    className={inputClass}
+                                >
+                                    <option value="">Participation Type</option>
+                                    <option value="Solo">Solo</option>
+                                    <option value="Duet">Duet</option>
+                                </select>
                             </div>
 
                             <div className="relative">
