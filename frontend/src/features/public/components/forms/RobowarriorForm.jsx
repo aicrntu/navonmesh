@@ -313,11 +313,15 @@ const RobowarriorForm = () => {
                             Terms & Conditions
                         </h3>
 
-                        <p className="mt-2 text-sm leading-relaxed text-gray-600">
-                            I hereby declare that I have read and understood the rules and regulations of
+                        <p className="mt-2 text-xs leading-relaxed text-gray-600">
+                            <span className="font-medium text-gray-800">1.</span> I hereby declare that I have read and understood the rules and regulations of
                             <span className="font-medium text-gray-800"> Robo Warrior</span>. I agree to abide by
                             the guidelines outlined in the rulebook and comply with any modifications or
                             instructions issued during the competition.
+                        </p>
+
+                        <p className="mt-2 text-xs leading-relaxed text-gray-600">
+                            <span className="font-medium text-gray-800">2.</span> All logistical expenses (travel/manufacturing) and the safety of the robot are the sole responsibility of the participants; the institution is not liable for any damages sustained.
                         </p>
 
                         <div className="mt-4 flex items-start gap-3">

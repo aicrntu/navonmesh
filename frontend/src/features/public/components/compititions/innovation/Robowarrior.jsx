@@ -79,12 +79,10 @@ const RoboWarriorsPage = () => {
 
         // Timeline / Roadmap
         roadmap: [
-            { title: "Call for Application", date: "TBA" },
-            { title: "Last Date to Apply", date: "TBA" },
-            { title: "Technical Presentation", date: "TBA" },
-            { title: "Durability & Function Test", date: "TBA" },
-            { title: "League Stage Battles", date: "TBA" },
-            { title: "Final Clash of Top 4", date: "TBA" },
+            { title: "Call for Application", date: "10th February" },
+            { title: "Last Date to Apply", date: "5th March" },
+            { title: "League Rounds", date: "14th March" },
+            { title: "Finale", date: "15th March" },
         ],
     };
 
@@ -294,9 +292,9 @@ const RoboWarriorsPage = () => {
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {[
-                            "Engineering/Tech UG/PG/Diploma Students",
-                            "Robotics, AI/ML Enthusiasts of Any Stream",
-                            "Age Limit: 17-25"
+                            "Open to UG and Diploma students across all disciplines",
+                            "Maximum of 5 members per team",
+                            "Participants must be between 17 and 25 years"
                         ].map((item, i) => (
                             <motion.div
                                 key={i}

@@ -4,6 +4,29 @@ import { useAdminList } from "../../../hooks/useAdminList";
 import { exportToExcel } from "../../../utils/excelExport";
 import { Download, Search, ChevronLeft, ChevronRight } from "lucide-react";
 
+const ExpandableText = ({ text, limit = 4 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  if (!text) return "N/A";
+
+  const words = text.split(" ");
+  if (words.length <= limit) return text;
+
+  return (
+    <div>
+      <p>
+        {isExpanded ? text : words.slice(0, limit).join(" ") + "..."}
+      </p>
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="text-blue-500 hover:underline text-xs mt-1 font-medium"
+      >
+        {isExpanded ? "Show Less" : "Show All"}
+      </button>
+    </div>
+  );
+};
+
 export default function InnomakerList() {
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
   const [data, setData] = useState([]);
@@ -104,13 +127,17 @@ export default function InnomakerList() {
                 <td className="px-3 py-3">{item.whoAreYou}</td>
                 <td className="px-3 py-3 font-medium">{item.institute}</td>
                 <td className="px-3 py-3 font-bold text-[#008fad]">{item.projectName}</td>
-                <td className="px-3 py-3 truncate max-w-[150px]" title={item.projectDescription}>{item.projectDescription}</td>
+                <td className="px-3 py-3 min-w-[150px]">
+                  <ExpandableText text={item.projectDescription} />
+                </td>
                 <td className="px-3 py-3">
                   {item.githubLink ? (
                     <a href={item.githubLink} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Link</a>
                   ) : "N/A"}
                 </td>
-                <td className="px-3 py-3">{item.technologies}</td>
+                <td className="px-3 py-3 min-w-[150px]">
+                  <ExpandableText text={item.technologies} />
+                </td>
 
                 <td className="px-3 py-3 text-gray-500">
                   {item.createdAt ? (

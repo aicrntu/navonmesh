@@ -63,54 +63,92 @@ const Planx = () => {
     return (
         <div className="bg-gray-50 min-h-screen font-sans text-gray-900 overflow-x-hidden">
             {/* HERO SECTION */}
-            <section className="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-6 pt-20">
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent z-10" />
+            <section className="relative w-full overflow-hidden min-h-[65vh] sm:min-h-[75vh] lg:min-h-[92vh]">
+                {/* Background Image */}
+                <div className="absolute inset-0">
                     <img
                         src={data.heroImage}
-                        alt="Hero"
-                        className="w-full h-full object-cover opacity-60"
+                        alt="PlanX Hero"
+                        className="w-full h-full object-cover opacity-50"
                     />
+
+                    {/* Dark overlay */}
+                    <div className="absolute inset-0 bg-black/20" />
+
+                    {/* Soft gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
                 </div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="relative z-10 max-w-4xl"
-                >
-                    <img
-                        src={data.logo}
-                        alt="Logo"
-                        className="h-24 md:h-32 mb-8 mx-auto filter drop-shadow-2xl"
-                    />
+                {/* Content */}
+                <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-20
+                  pt-28 sm:pt-32 lg:pt-[12rem]
+                  pb-14 sm:pb-16 lg:pb-20
+                  min-h-[65vh] sm:min-h-[75vh] lg:min-h-[80vh]
+                  flex items-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 25 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="w-full max-w-3xl"
+                    >
+                        {/* Logo */}
+                        <div className="flex items-center gap-4">
+                            <img
+                                src={data.logo}
+                                alt="PlanX Logo"
+                                className="h-12 sm:h-14 md:h-16 lg:h-20 drop-shadow-2xl"
+                            />
+                        </div>
 
-                    <h1 className="text-xl md:text-xl font-black text-gray-900 leading-tight tracking-tighter mb-8 uppercase">
-                        {data.heroTitlePart1}{" "}
-                        <span className="text-primary italic">{data.heroTitlePart2}</span>
-                    </h1>
+                        {/* Tagline Strip */}
+                        <div className="mt-6 sm:mt-8 inline-block w-full sm:w-auto">
+                            <div className="bg-black/55 backdrop-blur-md border border-white/10
+                        px-4 sm:px-5 py-3 rounded-xl">
+                                <p className="text-xs sm:text-sm md:text-base font-black uppercase tracking-widest text-white leading-snug">
+                                    {data.heroTitlePart1}{" "}
+                                    <span className="text-sky-400">{data.heroTitlePart2}</span>
+                                </p>
+                            </div>
+                        </div>
 
-                    {data.registrationLink.startsWith("/") ? (
-                        <Link
-                            to={data.registrationLink}
-                            className="inline-flex items-center gap-3 px-10 py-5 bg-gray-900 hover:bg-primary text-white font-black rounded-2xl transition-all hover:scale-105 shadow-2xl shadow-black/10 tracking-widest text-xs uppercase group"
-                        >
-                            Secure Your Spot{" "}
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                    ) : (
-                        <a
-                            href={data.registrationLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-3 px-10 py-5 bg-gray-900 hover:bg-primary text-white font-black rounded-2xl transition-all hover:scale-105 shadow-2xl shadow-black/10 tracking-widest text-xs uppercase group"
-                        >
-                            Secure Your Spot{" "}
-                            <ExternalLink className="w-4 h-4 group-hover:rotate-45 transition-transform" />
-                        </a>
-                    )}
-                </motion.div>
+                        {/* CTA */}
+                        <div className="mt-6 sm:mt-8">
+                            {data.registrationLink.startsWith("/") ? (
+                                <Link
+                                    to={data.registrationLink}
+                                    className="w-full sm:w-[340px] md:w-[360px]
+                       inline-flex items-center justify-center gap-3
+                       px-8 sm:px-10 py-4 sm:py-5
+                       bg-gray-950 hover:bg-primary text-white font-black
+                       rounded-2xl transition-all hover:scale-[1.02]
+                       shadow-2xl shadow-black/40
+                       tracking-widest text-[10px] sm:text-xs uppercase group"
+                                >
+                                    Secure Your Spot
+                                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                </Link>
+                            ) : (
+                                <a
+                                    href={data.registrationLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-full sm:w-[340px] md:w-[360px]
+                       inline-flex items-center justify-center gap-3
+                       px-8 sm:px-10 py-4 sm:py-5
+                       bg-gray-950 hover:bg-primary text-white font-black
+                       rounded-2xl transition-all hover:scale-[1.02]
+                       shadow-2xl shadow-black/40
+                       tracking-widest text-[10px] sm:text-xs uppercase group"
+                                >
+                                    Secure Your Spot
+                                    <ExternalLink className="w-4 h-4 group-hover:rotate-45 transition-transform" />
+                                </a>
+                            )}
+                        </div>
+                    </motion.div>
+                </div>
             </section>
+
 
             {/* ABOUT SECTION */}
             <section className="py-24 bg-white">
