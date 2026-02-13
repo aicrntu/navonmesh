@@ -15,6 +15,18 @@ const PARTNERS = [
         logo: "/logo/Quizzing-partner.jpeg"
     },
     {
+        name: "Reffto",
+        logo: "/logo/reffto_logo2.jpg"
+    },
+    {
+        name: "Robonauts India",
+        logo: "/logo/Robonauts India-black.png"
+    },
+    {
+        name: "Connect Siksha",
+        logo: "/logo/Connect Siksha logo.png"
+    },
+    {
         name: "Wizcraft Mime",
         logo: "/partners/wizcraft-mime-logo.jpg"
     },

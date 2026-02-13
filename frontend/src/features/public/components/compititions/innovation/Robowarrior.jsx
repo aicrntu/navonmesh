@@ -226,17 +226,17 @@ const RoboWarriorsPage = () => {
                                 <img
                                     src="/logo/Connect Siksha logo.png"
                                     alt="Connect Siksha Logo"
-                                    className="h-16 md:h-10 filter drop-shadow-2xl bg-white/90 rounded-lg p-2 backdrop-blur-sm"
+                                    className="h-16 md:h-12 filter drop-shadow-2xl bg-white/90 rounded-lg p-2 backdrop-blur-sm"
                                 />
                                 <img
-                                    src="/logo/ROBONAUTS INDIA.png"
-                                    alt="ROBONAUTS INDIA Logo"
-                                    className="h-16 md:h-10 filter drop-shadow-2xl bg-white/90 rounded-lg p-2 backdrop-blur-sm"
+                                    src="/logo/reffto_logo2.jpg"
+                                    alt="reffto_logo Logo"
+                                    className="h-16 md:h-12 filter drop-shadow-2xl bg-white/90 rounded-lg backdrop-blur-sm"
                                 />
                                 <img
                                     src="/logo/Robonauts India 01.png"
                                     alt="Robonauts India 01 Logo"
-                                    className="h-16 md:h-10 filter drop-shadow-2xl bg-white/10 rounded-lg p-2 backdrop-blur-sm"
+                                    className="h-16 md:h-12 filter drop-shadow-2xl bg-white/10 rounded-lg p-2 backdrop-blur-sm"
                                 />
                             </div>
                         </div>
