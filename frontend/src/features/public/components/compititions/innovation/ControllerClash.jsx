@@ -92,54 +92,123 @@ const ControllerClash = () => {
     return (
         <div className="bg-gray-50 min-h-screen font-sans text-gray-900 overflow-x-hidden">
             {/* Hero Section */}
-            <section className="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-6 pt-20">
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent z-10" />
+
+            <section className="relative w-full overflow-hidden min-h-[65vh] sm:min-h-[75vh] lg:min-h-[92vh]">
+                {/* Background Image */}
+                
+                <div className="absolute inset-0">
                     <img
                         src={data.heroImage}
                         alt="Hero"
                         className="w-full h-full object-cover opacity-60"
                     />
+
+                    {/* Dark overlay */}
+                    <div className="absolute inset-0 bg-black/30" />
+
+                    {/* Soft gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/100 via-black/60 to-transparent" />
                 </div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    className="relative z-10 max-w-4xl"
+                {/* Content */}
+                <div
+                    className="relative z-10 max-w-7xl mx-auto px-6 lg:px-20
+    pt-24 sm:pt-28 lg:pt-[8.5rem]
+    pb-12 sm:pb-14 lg:pb-16
+    min-h-[60vh] sm:min-h-[70vh] lg:min-h-[85vh]
+    flex items-center"
                 >
+                    <motion.div
+                        initial={{ opacity: 0, y: 25 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="w-full max-w-3xl"
+                    >
+                        {/* Logo / Heading Block */}
+                        <div className="mb-6">
+                            <h1 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tighter uppercase mb-2">
+                                Controller Clash:
+                            </h1>
+                            <h2 className="text-3xl md:text-5xl font-black text-primary leading-tight tracking-tighter uppercase">
+                                Esport Battleground
+                            </h2>
+                        </div>
 
-                    <div className="p-4 rounded-2xl shadow-2xl">
-                        <h1 className="text-5xl font-black text-gray-900 leading-tight tracking-tighter  uppercase">Controller Clash:</h1>
-                        <h1 className="text-5xl font-black text-gray-900 leading-tight tracking-tighter mb-2 uppercase">Esport Battleground</h1>
-                    </div>
+                        {/* Sub Heading */}
+                        <div className="mt-4">
+                            <h3 className="text-white font-bold uppercase tracking-widest leading-tight">
+                                <span className="block text-xl sm:text-2xl">
+                                    {data.heroTitlePart1}
+                                </span>
 
+                                <span className="block text-xl sm:text-2xl text-primary">
+                                    {data.heroTitlePart2}
+                                </span>
+                            </h3>
+                        </div>
 
-                    <h1 className="text-xl md:text-xl font-black text-gray-900 leading-tight tracking-tighter mb-8 uppercase">
-                        {data.heroTitlePart1}{" "}
-                        <span className="text-primary italic">{data.heroTitlePart2}</span>
-                    </h1>
+                        {/* Pills Navigation */}
+                        <div className="mt-6 flex flex-wrap items-center gap-3">
+                            {["about", "benefits", "eligibility", "timeline"].map((id) => (
+                                <button
+                                    key={id}
+                                    onClick={() => scrollToSection(id)}
+                                    className="px-6 py-2.5 rounded-2xl
+            bg-white/10 hover:bg-white/15
+            border border-white/10
+            text-white/70 hover:text-white
+            text-[11px] font-black uppercase tracking-widest
+            transition-all"
+                                >
+                                    {id}
+                                </button>
+                            ))}
+                        </div>
 
-                    {data.registrationLink.startsWith("/") ? (
-                        <Link
-                            to={data.registrationLink}
-                            className="inline-flex items-center gap-3 px-10 py-5 bg-gray-900 hover:bg-primary text-white font-black rounded-2xl transition-all hover:scale-105 shadow-2xl shadow-black/10 tracking-widest text-xs uppercase group"
-                        >
-                            Secure Your Spot
-                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                    ) : (
-                        <a
-                            href={data.registrationLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-3 px-10 py-5 bg-gray-900 hover:bg-primary text-white font-black rounded-2xl transition-all hover:scale-105 shadow-2xl shadow-black/10 tracking-widest text-xs uppercase group"
-                        >
-                            Secure Your Spot
-                            <ExternalLink className="w-4 h-4 group-hover:rotate-45 transition-transform" />
-                        </a>
-                    )}
-                </motion.div>
+                        {/* CTA */}
+                        <div className="mt-8">
+                            {data.registrationLink.startsWith("/") ? (
+                                <Link
+                                    to={data.registrationLink}
+                                    className="relative w-full sm:w-[380px]
+            inline-flex items-center justify-center gap-4
+            px-9 py-4.5
+            bg-[#0088cc] hover:bg-[#0077b3]
+            text-white font-black
+            rounded-2xl transition-all hover:scale-[1.02]
+            tracking-widest text-xs uppercase group
+            shadow-2xl shadow-black/40"
+                                >
+                                    {/* glow layer */}
+                                    <span className="absolute -inset-1 rounded-2xl bg-[#0088cc]/30 blur-xl opacity-70 group-hover:opacity-100 transition-opacity" />
+
+                                    <span className="relative z-10 p-5">Secure Your Spot</span>
+                                    <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                </Link>
+                            ) : (
+                                <a
+                                    href={data.registrationLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="relative w-full sm:w-[380px]
+            inline-flex items-center justify-center gap-4
+            px-9 py-4.5
+            bg-[#0088cc] hover:bg-[#0077b3]
+            text-white font-black
+            rounded-2xl transition-all hover:scale-[1.02]
+            tracking-widest text-xs uppercase group
+            shadow-2xl shadow-black/40"
+                                >
+                                    {/* glow layer */}
+                                    <span className="absolute -inset-1 rounded-2xl bg-[#0088cc]/30 blur-xl opacity-70 group-hover:opacity-100 transition-opacity" />
+
+                                    <span className="relative z-10">Secure Your Spot</span>
+                                    <ExternalLink className="relative z-10 w-5 h-5 group-hover:rotate-45 transition-transform" />
+                                </a>
+                            )}
+                        </div>
+                    </motion.div>
+                </div>
             </section>
 
             {/* About Section */}

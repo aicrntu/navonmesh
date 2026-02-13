@@ -76,64 +76,142 @@ const BinaryBattle = () => {
   return (
     <div className="bg-gray-50 min-h-screen font-sans text-gray-900 overflow-x-hidden">
       {/* HERO */}
-      <section className="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-6 pt-20">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent z-10" />
+      {/* Hero Section */}
+      <section className="relative w-full overflow-hidden min-h-[65vh] sm:min-h-[75vh] lg:min-h-[92vh]">
+        {/* Background Image */}
+        <div className="absolute inset-0">
           <img
             src={battleData.heroImage}
             alt="Hero"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-95"
           />
+
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/30" />
+
+          {/* Soft gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="relative z-10 max-w-4xl"
+        {/* Content */}
+        <div
+          className="relative z-10 max-w-7xl mx-auto px-6 lg:px-20
+    pt-24 sm:pt-28 lg:pt-[8.5rem]
+    pb-12 sm:pb-14 lg:pb-16
+    min-h-[60vh] sm:min-h-[70vh] lg:min-h-[85vh]
+    flex items-center"
         >
-          <div className="flex justify-center items-center gap-8 mb-8">
-            <img
-              src={battleData.logo}
-              alt="Logo"
-              className="h-24 md:h-32 filter drop-shadow-2xl"
-            />
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="w-full max-w-3xl"
+          >
+            {/* Logo */}
+            <div className="flex items-center gap-4">
+              <img
+                src={battleData.logo}
+                alt="Logo"
+                className="h-14 sm:h-16 md:h-20 lg:h-24 drop-shadow-2xl"
+              />
+            </div>
 
-          </div>
+            {/* Main Heading */}
+            <div className="mt-8">
+              <h1 className="text-white font-black uppercase tracking-widest leading-tight">
+                <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+                  {battleData.heroTitlePart1}
+                </span>
 
-          <h1 className="text-xl md:text-xl font-black text-gray-900 leading-tight tracking-tighter mb-8 uppercase">
-            {battleData.heroTitlePart1}{" "}
-            <span className="text-white italic">
-              {battleData.heroTitlePart2}
-            </span>
-          </h1>
+                <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl text-primary">
+                  {battleData.heroTitlePart2}
+                </span>
+              </h1>
+            </div>
 
-          {battleData.registrationLink.startsWith("/") ? (
-            <Link
-              to={battleData.registrationLink}
-              className="inline-flex items-center gap-3 px-10 py-5 bg-gray-900 hover:bg-primary text-white font-black rounded-2xl transition-all hover:scale-105 shadow-2xl shadow-black/10 tracking-widest text-xs uppercase group"
-            >
-              Secure Your Spot{" "}
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          ) : (
-            <a
-              href={battleData.registrationLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-10 py-5 bg-gray-900 hover:bg-primary text-white font-black rounded-2xl transition-all hover:scale-105 shadow-2xl shadow-black/10 tracking-widest text-xs uppercase group"
-            >
-              Secure Your Spot{" "}
-              <ExternalLink className="w-4 h-4 group-hover:rotate-45 transition-transform" />
-            </a>
-          )}
-        </motion.div>
-        <h1 className="text-xl md:text-xl font-black text-white-900 leading-tight tracking-tighter mt-8 uppercase">Knowledge Partner</h1>
-        <img
-          src="/logo/Indore Software Association - Logo.png"
-          alt="Indore Software Association Logo"
-          className="h-20 md:h-28 filter drop-shadow-2xl"
-        />
+            {/* Pills Navigation */}
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              {["about", "themes", "glimpses", "benefits", "timeline"].map((id) => (
+                <button
+                  key={id}
+                  onClick={() => {
+                    const element = document.getElementById(id);
+                    if (element) {
+                      const headerOffset = 80;
+                      const elementPosition = element.getBoundingClientRect().top;
+                      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+                    }
+                  }}
+                  className="px-6 py-2.5 rounded-2xl
+                             bg-white/10 hover:bg-white/15
+                             border border-white/10
+                             text-white/70 hover:text-white
+                             text-[11px] font-black uppercase tracking-widest
+                             transition-all"
+                >
+                  {id}
+                </button>
+              ))}
+            </div>
+
+            {/* CTA */}
+            <div className="mt-8">
+              {battleData.registrationLink.startsWith("/") ? (
+                <Link
+                  to={battleData.registrationLink}
+                  className="relative w-full sm:w-[380px]
+            inline-flex items-center justify-center gap-4
+            px-9 py-4.5
+            bg-[#0088cc] hover:bg-[#0077b3]
+            text-white font-black
+            rounded-2xl transition-all hover:scale-[1.02]
+            tracking-widest text-xs uppercase group
+            shadow-2xl shadow-black/40"
+                >
+                  {/* glow layer */}
+                  <span className="absolute -inset-1 rounded-2xl bg-[#0088cc]/30 blur-xl opacity-70 group-hover:opacity-100 transition-opacity" />
+
+                  <span className="relative z-10 p-5">Secure Your Spot</span>
+                  <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              ) : (
+                <a
+                  href={battleData.registrationLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative w-full sm:w-[380px]
+            inline-flex items-center justify-center gap-4
+            px-9 py-4.5
+            bg-[#0088cc] hover:bg-[#0077b3]
+            text-white font-black
+            rounded-2xl transition-all hover:scale-[1.02]
+            tracking-widest text-xs uppercase group
+            shadow-2xl shadow-black/40"
+                >
+                  {/* glow layer */}
+                  <span className="absolute -inset-1 rounded-2xl bg-[#0088cc]/30 blur-xl opacity-70 group-hover:opacity-100 transition-opacity" />
+
+                  <span className="relative z-10">Secure Your Spot</span>
+                  <ExternalLink className="relative z-10 w-5 h-5 group-hover:rotate-45 transition-transform" />
+                </a>
+              )}
+            </div>
+
+            <div className="mt-10 flex items-center justify-center gap-4 bg-white/10 rounded-lg p-2 backdrop-blur-sm w-[30%]">
+              <div>
+                <h1 className="text-sm font-bold text-white/80 uppercase tracking-widest">Knowledge</h1>
+                <h1 className="text-sm font-bold text-white/80 uppercase tracking-widest">Partner</h1>
+              </div>
+              <img
+                src="/logo/Indore Software Association - Logo.png"
+                alt="Indore Software Association Logo"
+                className="h-16 md:h-20 filter drop-shadow-2xl bg-white/90 rounded-lg p-2 backdrop-blur-sm"
+              />
+            </div>
+
+          </motion.div>
+        </div>
       </section>
 
       {/* ABOUT */}

@@ -98,7 +98,7 @@ const Admad = () => {
           <img
             src={data.heroImage}
             alt="Hero"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-90"
           />
 
           {/* Dark overlay */}

@@ -7,6 +7,14 @@ const cn = (...inputs) => twMerge(clsx(inputs));
 
 const PARTNERS = [
     {
+        name: "Indore Software Association",
+        logo: "/logo/Indore Software Association - Logo.png"
+    },
+    {
+        name: "Quizzing Partner",
+        logo: "/logo/Quizzing-partner.jpeg"
+    },
+    {
         name: "Wizcraft Mime",
         logo: "/partners/wizcraft-mime-logo.jpg"
     },
