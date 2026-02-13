@@ -241,7 +241,7 @@ const TaleTellersForm = () => {
                         <div className="space-y-6">
                             <div className="bg-purple-50 p-6 rounded-2xl border border-purple-100 flex flex-col md:flex-row items-center gap-6">
                                 <div className="flex-1">
-                                    <h4 className="text-xl font-bold text-gray-800 mb-2">Registration Fee: ₹ 200.00 Per Team</h4>
+                                    <h4 className="text-xl font-bold text-gray-800 mb-2">Registration Fee: ₹ 200.00 Per Head</h4>
                                     <p className="text-gray-600 text-sm mb-4">Scan the QR code to pay the registration fee and upload the screenshot below for verification.</p>
                                 </div>
                                 <div className="w-40 h-40 bg-white p-2 rounded-xl shadow-sm border border-gray-100">

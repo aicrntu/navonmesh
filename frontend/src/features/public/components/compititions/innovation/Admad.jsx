@@ -90,59 +90,31 @@ const Admad = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen font-sans text-gray-900 overflow-x-hidden">
-      {/* Secondary Navigation - Commented out to avoid duplication with PublicLayout */}
-      {/* 
-      <nav className="fixed top-20 left-1/2 -translate-x-1/2 w-[90%] md:w-auto z-[100] bg-black/80 backdrop-blur-xl border border-white/10 px-6 py-3 rounded-2xl flex items-center justify-between gap-8 shadow-2xl">
-          <Link to="/" className="text-white/60 hover:text-white transition-colors">
-              <ArrowLeft className="w-5 h-5" />
-          </Link>
-          <div className="hidden md:flex items-center gap-8">
-              {['about', 'glimpses', 'benefits', 'timeline'].map((id) => (
-                  <button
-                      key={id}
-                      onClick={() => scrollToSection(id)}
-                      className="text-xs font-black uppercase tracking-[0.2em] text-white/60 hover:text-primary transition-colors"
-                  >
-                      {id}
-                  </button>
-              ))}
-          </div>
-          <a
-              href={data.registrationLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-2 bg-primary hover:bg-blue-600 text-white text-[10px] font-black uppercase tracking-widest rounded-xl transition-all shadow-lg shadow-primary/20"
-          >
-              Register
-          </a>
-      </nav>
-      */}
 
       {/* Hero Section */}
-
       <section className="relative w-full overflow-hidden min-h-[65vh] sm:min-h-[75vh] lg:min-h-[92vh]">
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
             src={data.heroImage}
             alt="Hero"
-            className="w-full h-full object-cover opacity-50"
+            className="w-full h-full object-cover opacity-60"
           />
 
           {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/20" />
+          <div className="absolute inset-0 bg-black/30" />
 
           {/* Soft gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
         </div>
-
+        
         {/* Content */}
         <div
           className="relative z-10 max-w-7xl mx-auto px-6 lg:px-20
-      pt-28 sm:pt-32 lg:pt-[12rem]
-      pb-14 sm:pb-16 lg:pb-20
-      min-h-[65vh] sm:min-h-[75vh] lg:min-h-[80vh]
-      flex items-center"
+    pt-24 sm:pt-28 lg:pt-[8.5rem]
+    pb-12 sm:pb-14 lg:pb-16
+    min-h-[60vh] sm:min-h-[70vh] lg:min-h-[85vh]
+    flex items-center"
         >
           <motion.div
             initial={{ opacity: 0, y: 25 }}
@@ -155,61 +127,86 @@ const Admad = () => {
               <img
                 src={data.logo}
                 alt="Logo"
-                className="h-12 sm:h-14 md:h-16 lg:h-20 drop-shadow-2xl"
+                className="h-14 sm:h-16 md:h-20 lg:h-24 drop-shadow-2xl"
               />
             </div>
 
-            {/* Tagline Strip */}
-            <div className="mt-6 sm:mt-8 inline-block w-full sm:w-auto">
-              <div
-                className="bg-black/55 backdrop-blur-md border border-white/10
-            px-4 sm:px-5 py-3 rounded-xl"
-              >
-                <p className="text-xs sm:text-sm md:text-base font-black uppercase tracking-widest text-white leading-snug">
-                  {data.heroTitlePart1}{" "}
-                  <span className="text-primary">{data.heroTitlePart2}</span>
-                </p>
-              </div>
+            {/* Main Heading */}
+            <div className="mt-8">
+              <h1 className="text-white font-black uppercase tracking-widest leading-tight">
+                <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+                  {data.heroTitlePart1}
+                </span>
+
+                <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl text-primary">
+                  {data.heroTitlePart2}
+                </span>
+              </h1>
+            </div>
+
+            {/* Pills Navigation */}
+            <div className="mt-6 flex flex-wrap items-center gap-3">
+              {["about", "glimpses", "benefits", "timeline"].map((id) => (
+                <button
+                  key={id}
+                  onClick={() => scrollToSection(id)}
+                  className="px-6 py-2.5 rounded-2xl
+            bg-white/10 hover:bg-white/15
+            border border-white/10
+            text-white/70 hover:text-white
+            text-[11px] font-black uppercase tracking-widest
+            transition-all"
+                >
+                  {id}
+                </button>
+              ))}
             </div>
 
             {/* CTA */}
-            <div className="mt-6 sm:mt-8">
+            <div className="mt-8">
               {data.registrationLink.startsWith("/") ? (
                 <Link
                   to={data.registrationLink}
-                  className="w-full sm:w-[340px] md:w-[360px]
-              inline-flex items-center justify-center gap-3
-              px-8 sm:px-10 py-4 sm:py-5
-              bg-gray-950 hover:bg-primary text-white font-black
-              rounded-2xl transition-all hover:scale-[1.02]
-              shadow-2xl shadow-black/40
-              tracking-widest text-[10px] sm:text-xs uppercase group"
+                  className="relative w-full sm:w-[380px]
+            inline-flex items-center justify-center gap-4
+            px-9 py-4.5
+            bg-[#0088cc] hover:bg-[#0077b3]
+            text-white font-black
+            rounded-2xl transition-all hover:scale-[1.02]
+            tracking-widest text-xs uppercase group
+            shadow-2xl shadow-black/40"
                 >
-                  Secure Your Spot
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  {/* glow layer */}
+                  <span className="absolute -inset-1 rounded-2xl bg-[#0088cc]/30 blur-xl opacity-70 group-hover:opacity-100 transition-opacity" />
+
+                  <span className="relative z-10 p-5">Secure Your Spot</span>
+                  <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               ) : (
                 <a
                   href={data.registrationLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-[340px] md:w-[360px]
-              inline-flex items-center justify-center gap-3
-              px-8 sm:px-10 py-4 sm:py-5
-              bg-gray-950 hover:bg-primary text-white font-black
-              rounded-2xl transition-all hover:scale-[1.02]
-              shadow-2xl shadow-black/40
-              tracking-widest text-[10px] sm:text-xs uppercase group"
+                  className="relative w-full sm:w-[380px]
+            inline-flex items-center justify-center gap-4
+            px-9 py-4.5
+            bg-[#0088cc] hover:bg-[#0077b3]
+            text-white font-black
+            rounded-2xl transition-all hover:scale-[1.02]
+            tracking-widest text-xs uppercase group
+            shadow-2xl shadow-black/40"
                 >
-                  Secure Your Spot
-                  <ExternalLink className="w-4 h-4 group-hover:rotate-45 transition-transform" />
+                  {/* glow layer */}
+                  <span className="absolute -inset-1 rounded-2xl bg-[#0088cc]/30 blur-xl opacity-70 group-hover:opacity-100 transition-opacity" />
+
+                  <span className="relative z-10">Secure Your Spot</span>
+                  <ExternalLink className="relative z-10 w-5 h-5 group-hover:rotate-45 transition-transform" />
                 </a>
               )}
             </div>
           </motion.div>
         </div>
       </section>
-
 
       {/* About Section */}
       <section id="about" className="py-24 bg-white">
@@ -401,8 +398,8 @@ const Admad = () => {
               >
                 <div
                   className={`flex-1 w-full p-8 bg-gray-50 border border-gray-100 rounded-2xl ${i % 2 === 0
-                      ? "text-left md:text-right"
-                      : "text-left"
+                    ? "text-left md:text-right"
+                    : "text-left"
                     }`}
                 >
                   <h4 className="font-black text-lg text-gray-900 uppercase">
