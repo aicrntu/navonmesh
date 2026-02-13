@@ -242,6 +242,7 @@ const SoloSpotlightForm = () => {
                                 <div className="flex-1">
                                     <h4 className="text-xl font-bold text-gray-800 mb-2">Registration Fee: ₹ 200.00 Per Team</h4>
                                     <p className="text-gray-600 text-sm mb-4">Scan the QR code to pay the registration fee and upload the screenshot below for verification.</p>
+                                    <p className="text-gray-600 text-sm italic">While making payment, please mention the following in the Note section: <span className="font-bold">Navonmesh: Your Track : Your Name</span></p>
                                 </div>
                                 <div className="w-40 h-40 bg-white p-2 rounded-xl shadow-sm border border-gray-100">
                                     <img src="/compitition/scanner-upi.jpeg" alt="UPI Scanner" className="w-full h-full object-contain" />
@@ -250,6 +251,7 @@ const SoloSpotlightForm = () => {
 
                             <div className="bg-gray-50 p-6 rounded-2xl border-2 border-dashed border-gray-200 hover:border-[#008fad] transition-colors">
                                 <label className={labelClass}>Upload Payment Screenshot *</label>
+                                <p className="text-xs text-gray-500 mb-2">UPI Transaction ID No(Gpay), UPI Refrence No.(paytm), UTR No(phone pay) , UPI TXN Id (Cred) / UPI ID : A 12 Digit no. Unique for your Transaction has to be visible on the screenshot Uploaded. Only then the payment will be considered valid.</p>
                                 <div className="flex items-center gap-4">
                                     <Camera className="text-[#008fad] w-8 h-8 opacity-60" />
                                     <input
