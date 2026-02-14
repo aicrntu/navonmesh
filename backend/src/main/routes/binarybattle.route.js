@@ -6,6 +6,6 @@ import { validateBinarybattle } from "../validators/binarybattle.validator.js";
 
 const router = express.Router();
 
-router.post("/binarybattle", upload.fields([{ name: 'project', maxCount: 1 }, { name: 'paymentScreenshot', maxCount: 1 }]), validateBinarybattle, submitBinarybattle);
+router.post("/binarybattle", upload.fields([/* { name: 'project', maxCount: 1 }, */ { name: 'paymentScreenshot', maxCount: 1 }]), validateBinarybattle, submitBinarybattle);
 
 export default router;

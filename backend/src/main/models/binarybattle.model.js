@@ -73,10 +73,10 @@ const binarybattleSchema = new mongoose.Schema(
         message: "A team must have between 2 and 4 participants.",
       },
     },
-    project: {
-      type: String,
-      required: true,
-    },
+    // project: {
+    //   type: String,
+    //   required: true,
+    // },
   },
   {
     timestamps: true,

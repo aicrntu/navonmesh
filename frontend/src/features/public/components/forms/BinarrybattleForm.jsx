@@ -28,7 +28,7 @@ const BinarryBattleForm = () => {
         degree: "",
         githubLink: "",
         technologies: "",
-        project: null,
+        // project: null,
 
         paymentScreenshot: null,
         participants: [{ name: "", phone: "" }, { name: "", phone: "" }],
@@ -332,7 +332,7 @@ const BinarryBattleForm = () => {
                     </section>
 
                     {/* FILE UPLOAD */}
-                    <section>
+                    {/* <section>
                         <div className="flex items-center gap-2 mb-6 border-b pb-2">
                             <FileText className="w-5 h-5 text-[#008fad]" />
                             <h3 className="text-lg font-bold text-gray-800">
@@ -362,7 +362,7 @@ const BinarryBattleForm = () => {
                                 />
                             </div>
                         </div>
-                    </section>
+                    </section> */}
 
                     {/* PAYMENT DETAILS */}
                     < section >
